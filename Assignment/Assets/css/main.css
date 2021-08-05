@@ -1,0 +1,60 @@
+/*
+    body {
+        margin:0;
+        background-color: black;
+        height: 100%;
+    }*/
+    body, html{
+        height: 100%;
+        margin:0;
+        background-color: black;
+    }
+
+    main{
+
+    }
+    
+
+    
+
+    nav{
+        
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding-bottom: 75%;
+        
+        
+    }
+    .buy{
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .texts{ 
+        color: white;   
+    }
+    .test{
+        color: white;
+    }
+    .hi{
+        
+        /* The image used */
+        background-image: url("../img/car.png");
+
+/* Full height */
+        height: 100%;
+
+/* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .rotate{
+        font-size: 500px;
+        color: white;
+        transform: rotate(-90deg);  
+        padding-left: 40%;
+    }
+
