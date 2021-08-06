@@ -1,9 +1,4 @@
-/*
-    body {
-        margin:0;
-        background-color: black;
-        height: 100%;
-    }*/
+
     body, html{
         height: 100%;
         margin:0;
@@ -13,48 +8,69 @@
     main{
 
     }
-    
 
-    
-
-    nav{
-        
+    nav{     
         height: 100px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         width:100%;
-        padding-bottom: 75%;
-        
-        
+        position: fixed;
+        top:0;
+        padding-bottom: 25%;   
+        z-index: 9999; 
     }
+    
     .buy{
         color: white;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 20px;
+    
     }
-    .texts{ 
-        color: white;   
+    .logo{
+        margin: 10px 150px 10px 10px;
     }
-    .test{
+    
+    .faq{
         color: white;
+        font-family: 'Montserrat', sans-serif;
+        margin-right: 20px;
     }
-    .hi{
-        
-        /* The image used */
+    .mainCar{  
         background-image: url("../img/car.png");
-
-/* Full height */
         height: 100%;
-
-/* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .handWatch{  
+        background-image: url("../img/Bugatti-Smartwatches.jpeg");
+        height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     .rotate{
-        font-size: 500px;
+        font-size: 250px;
+        font-family: 'Helvetica' ,sans-serif;
         color: white;
         transform: rotate(-90deg);  
-        padding-left: 40%;
+
+    }
+
+    .trioText{
+        color: white;
+        display: flex;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .trioText .trio1{
+        
     }
 
