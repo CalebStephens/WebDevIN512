@@ -10,7 +10,7 @@
     }
 
     nav{     
-        height: 100px;
+        height: 120px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -20,6 +20,11 @@
         padding-bottom: 25%;   
         z-index: 9999; 
     }
+
+    ::selection{
+        background: #d71e28;
+        color:#000;
+    }
     
     .buy{
         color: white;
@@ -28,13 +33,19 @@
     
     }
     .logo{
-        margin: 10px 150px 10px 10px;
+        margin: 10px 130px 10px 10px;
     }
     
     .faq{
         color: white;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Helvetica', sans-serif;
         margin-right: 20px;
+    }
+    .firstScroll{
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .mainCar{  
         background-image: url("../img/car.png");
@@ -52,10 +63,10 @@
     }
     .rotate{
         font-size: 250px;
-        font-family: 'Helvetica' ,sans-serif;
+        font-family: neue-haas-grotesk-display,'Helvetica' ,sans-serif;
         color: white;
         transform: rotate(-90deg);  
-
+        
     }
 
     .trioText{
@@ -68,6 +79,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        font-size: 7rem;
     }
 
     .trioText .trio1{
