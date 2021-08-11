@@ -53,6 +53,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: absolute;
+        top: 0;
+        left :0;
+        right: 0;
+        bottom:0;
+        z-index: 10;
     }
     .handWatch{  
         background-image: url("../img/Bugatti-Smartwatches.jpeg");
@@ -60,12 +66,21 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: absolute;
+        z-index: 8;
+        top: 0;
+        left :0;
+        right: 0;
+        bottom:0;
     }
     .rotate{
         font-size: 250px;
         font-family: neue-haas-grotesk-display,'Helvetica' ,sans-serif;
         color: white;
-        transform: rotate(-90deg);  
+        transform: rotate(-90deg); 
+        z-index: 111;  
+        
+        
         
     }
 
@@ -80,6 +95,11 @@
         justify-content: center;
         flex-direction: column;
         font-size: 7rem;
+        z-index: 6;
+        top: 0;
+        left :0;
+        right: 0;
+        bottom:0;
     }
 
     .trioText .trio1{
