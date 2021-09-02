@@ -3,12 +3,16 @@
         height: 100%;
         margin:0;
         background-color: black;
+        
     }
 
     main{
 
     }
-
+    ::selection{
+        background: #d71e28;
+        color:#000;
+    }
     nav{     
         height: 120px;
         display: flex;
@@ -21,16 +25,12 @@
         z-index: 9999; 
     }
 
-    ::selection{
-        background: #d71e28;
-        color:#000;
-    }
+    
     
     .buy{
         color: white;
         font-family: 'Montserrat', sans-serif;
         margin-left: 20px;
-    
     }
 
     .logo{
@@ -43,44 +43,50 @@
         margin-right: 20px;
     }
 
-    .firstScroll{
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .firstSpace{
+        
+        
+        
     }
 
+    .rotate{
+        font-size: 250px;
+        font-family: "Times New Roman", Times, serif;
+        color: white;
+        transform: rotate(-90deg); 
+        justify-content: center;
+/*neue-haas-grotesk-display,'Helvetica' ,sans-serif*/
+    }
+    
+    
     .mainCar{  
-        background-image: url("../img/car.png");
+        background-image: url("../img/kanyeMain.jpeg");
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        
-     
-        
+       
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: relative;
     }
 
-    .handWatch{  
+    #handWatch{  
         background-image: url("../img/Bugatti-Smartwatches.jpeg");
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         
-        
-      
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        position:absolute;
     }
-    .rotate{
-        font-size: 250px;
-        font-family: neue-haas-grotesk-display,'Helvetica' ,sans-serif;
-        color: white;
-        transform: rotate(-90deg); 
-         
-        
-        justify-content: center;
-
-    }
+    
 
     .firstSpace{
         height: 100%;
@@ -90,42 +96,87 @@
 
     }
 
-    .trioText{
+    .trio-text{
         color: white;
         display: flex;
         height: 100%;
+        
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        font-size: 7rem;
+        font-size: 7em;
         
     }
+    
     .wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        grid-auto-rows: minmax(100px, auto);
-        color: white;
-      }
-      .one {
-            display: flex;
-            grid-column: 1;
-            grid-row: 1 / 6;
-            background-color: white;
-      }
-      .two {
-            grid-column: 2 ;
-            grid-row: 1 / 6;
-            background-color: red;
-      }
-      .three {
-            grid-column: 3;
-            grid-row: 1 / 6;
-            background-color: white;
+        
+        display: flex;
+        justify-content: space-around;
+        height: 75%;
+        
+       
+        
+    }
+    .one{
+        display: flex;
+        border-radius: 25px;
+        width:33.33%;
+        background-color: white;  
+        margin: 30px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .two{
+        width:33.33%;
+        border-radius: 25px;
+        background-color: red;
+        margin: 30px;
+        
+    }
+    .three{
+        
+        width:33.33%;
+        background-color: white;
+        border-radius: 25px;
+        margin: 30px;
       }
 
+      .test{
+          height: 100%;
+      }
 
+      .small-Grid{
+          display: flex;
+          justify-content: space-evenly;
+          height: 200%;
+          /*transform: rotate(-10deg); */
+          width: 100%;
+          
+      }
+
+    .first-grid-column{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        width: 14%;
+        
+    }
+
+    .space-1{
+        border-radius: 25px;
+        background-color: red;
+        margin-bottom: 10px;
+        height: 50%;
+        width: 100%;
+    }
+    
+    
+      
+      
 
