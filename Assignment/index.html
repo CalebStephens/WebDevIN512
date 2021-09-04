@@ -93,16 +93,21 @@
 
 
         </div>
-       <!-- 
+       <!------
         <script>
-            alert("I'm Javascript");
-            let el = document.getElementById("handWatch").style.left = "25%";
+            //alert("I'm Javascript");
+            //let el = document.getElementById("handWatch").style.left = "25%";
             
-
+            let amount = 100;
+            
             window.addEventListener('scroll', () =>{
-                if(window.scrollY > 820){
-                    document.getElementById("handWatch").style.left = "10%";
-                }
+                
+                    while(window.scrollY > 820 && window.scrollY < 920){
+                    let concat = amount + "\"%\"";
+                    document.getElementById("handWatch").style.left -= amount;
+                    amount -= 1;
+                    }
+                
                 const scrolled = window.scrollY;
                 console.log(scrolled);
                 
@@ -112,7 +117,7 @@
             
 
         </script>
-        -->
+        ---->
     </body>
 </html>
 
