@@ -95,7 +95,15 @@
         </div>
        
         <script>
-           
+            (async() =>{
+            let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE");
+            let info = await response.json();
+            console.log(info);
+            })();
+
+
+
+           /**
             let el = document.querySelector(".handWatch");
             console.log(el);
             let count = 820;
@@ -109,7 +117,7 @@
                 console.log(scrolled);
                 
                 
-            }); 
+            }); */
 
             
 
