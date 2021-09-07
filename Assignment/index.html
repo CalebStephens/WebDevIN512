@@ -27,7 +27,7 @@
                    
 
             <div class="rotate">KANYEWEST</div>
-            <div id = "handWatch"></div>  
+            <div class = "handWatch"></div>  
         </div>
                 
             
@@ -95,13 +95,15 @@
         </div>
        
         <script>
-            alert("I'm Javascript");
-            let el = document.getElementById("handWatch").style.left = "25%";
-            
-
+           
+            let el = document.querySelector(".handWatch");
+            console.log(el);
+            let count = 820;
+            let amount = 1;
             window.addEventListener('scroll', () =>{
-                if(window.scrollY > 820){
-                    document.getElementById("handWatch").style.left = "10%";
+                if(window.scrollY > count){
+                    el.style.left = (100 - amount) + "%";
+                    amount--;
                 }
                 const scrolled = window.scrollY;
                 console.log(scrolled);
