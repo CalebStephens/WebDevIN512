@@ -79,10 +79,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        
+        width: 500px;
         top: 0;
         left: 100%;
-        right: 0;
+        
         bottom: 0;
         position:absolute;
     }

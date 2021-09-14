@@ -109,7 +109,7 @@
 
 
 
-           /**
+        
             let el = document.querySelector(".handWatch");
             console.log(el);
             let count = 820;
@@ -117,13 +117,15 @@
             window.addEventListener('scroll', () =>{
                 if(window.scrollY > count){
                     el.style.left = (100 - amount) + "%";
-                    amount--;
+                    amount++;
+                }else{
+                    
                 }
                 const scrolled = window.scrollY;
                 console.log(scrolled);
                 
                 
-            }); */
+            }); 
 
             
 
