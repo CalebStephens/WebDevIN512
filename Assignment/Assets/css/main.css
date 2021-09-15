@@ -66,11 +66,11 @@
         background-repeat: no-repeat;
         background-size: cover;
        
-        top: 0;
+        top: 100%;
         left: 0;
         right: 0;
-        bottom: 0;
-        position: relative;
+        
+        position: fixed;
     }
 
     .handWatch{  
@@ -79,7 +79,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 500px;
+        width: 100%;
         top: 0;
         left: 100%;
         

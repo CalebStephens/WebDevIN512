@@ -109,21 +109,30 @@
 
 
 
-        
-            let el = document.querySelector(".handWatch");
-            console.log(el);
-            let count = 820;
+            let kanye = document.querySelector(".mainCar");
+            let handWatch = document.querySelector(".handWatch");
+            let boxInfo = kanye.getBoundingClientRect();
+            console.log(boxInfo);
+            let pageY = boxInfo.height;
             let amount = 1;
-            window.addEventListener('scroll', () =>{
-                if(window.scrollY > count){
-                    el.style.left = (100 - amount) + "%";
-                    amount++;
-                }else{
-                    
+            let amount2 = 1;
+            window.addEventListener('mousewheel', (e) =>{                
+
+                if(e.wheelDeltaY < 0){ //scrolling down
+                    let boxInfo = kanye.getBoundingClientRect();
+                    if(boxInfo.top > 0){
+                        console.log("here");
+                        kanye.style.top = (100 - amount) + "%";
+                        amount++;
+                    } else{
+                        handWatch.style.left = (100 - amount2) + "%";
+                        amount2++;
+                    }      
+                } else //scrolling up
+                {
+
                 }
-                const scrolled = window.scrollY;
-                console.log(scrolled);
-                
+                        
                 
             }); 
 
