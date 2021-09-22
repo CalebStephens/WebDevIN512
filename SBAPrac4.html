@@ -87,37 +87,38 @@
         
         */
             //settings id
-            let setting = document.querySelector("#settings");
             
-            //adding label with text air
-            let label1 = document.createElement("div");
-            label1.className = "label";
-            label1.innerHTML = "air";
-            setting.append(label1);
 
-            //creating the first switch
-            let switchClass1 = document.createElement("div");
-            switchClass1.className = "switch";
-            setting.append(switchClass1);
-            //creating the first knob
-            let knob1 = document.createElement("div");
-            knob1.className = "knob active";
-            document.querySelector(".switch").append(knob1);
+         settings.forEach((element, index) => {
+                console.log(element);
+                console.log(index);
 
-            //adding label with text water
-            let label2 = document.createElement("div");
-            label2.className = "label";
-            label2.innerHTML = "water";
-            setting.append(label2);
+                let label1 = document.createElement("div");
+                label1.className = "label";
+                label1.innerHTML = element;
+                
+                let switchClass1 = document.createElement("div");
+                switchClass1.className = "switch";
+                
+                let knob1 = document.createElement("div");
+                knob1.className = "knob disabled";
 
-            let switchClass2 = document.createElement("div");
-            switchClass2.className = "switch";
-            setting.append(switchClass2);
+                switchClass1.append(knob1);
 
-            let knob2 = document.createElement("div");
-            knob2.className = "knob disabled";
-            //this line here
-            document.querySelector(".switch:nth-of-type(2)").append(knob2);
+                //
+                knob1.addEventListener('click', (e) =>{
+                    if(knob1.className === "knob active"){
+                        knob1.className = "knob disabled";
+                    }
+                    else if(knob1.className === "knob disabled"){
+                        knob1.className = "knob active";
+                    }
+                });
+
+                settingsDiv.append(label1,switchClass1);
+            });
+            
+           
 
             
 
