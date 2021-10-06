@@ -208,6 +208,12 @@
         height: 70%;
         width: 100%;
     }
+    .video{
+        position: relative;
+        min-width: 100%;
+        min-height: 100%;
+          
+    }
     
     
       
