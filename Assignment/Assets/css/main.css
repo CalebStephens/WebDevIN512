@@ -56,7 +56,9 @@
         font-family: 'Helvetica', sans-serif;
         margin-right: 20px;
     }
-
+.h2{
+    font-size: 100%;
+}
 
     .container{
         position: relative;
@@ -100,21 +102,11 @@
         bottom: 0;
         position:relative;
     }
-    
-
-    .firstSpace{
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
 
     .trio-text{
         color: white;
         display: flex;
         height: 100%;
-        
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -163,25 +155,7 @@
         bottom: 20%;
     }
 
-    .two{
-        width:33.33%;
-        border-radius: 25px;
-        background-color: red;
-        margin: 30px;
-        
-    }
-    .three{
-        position: relative;
-        top: 20%;
-        width:33.33%;
-        background-color: white;
-        border-radius: 25px;
-        margin: 30px;
-      }
 
-      .test{
-          height: 100%;
-      }
 
       .small-Grid{
           display: flex;
