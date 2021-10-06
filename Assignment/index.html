@@ -20,12 +20,14 @@
             <div class = "faq">FAQ</div>  
         </nav>
         
-        <div class = "firstSpace"></div>
-        <div class="rotate">KANYEWEST</div>
-            
-        <div class = "first-car">
-             <div class = "second-car"></div>  
+        <div class = "container">
+        <div class="rotate"><h1>CARS</h1></div>
         </div>
+
+        
+        <div class = "first-car"><div class = "second-car"></div> </div>
+         
+        
                 
     
 
@@ -36,10 +38,13 @@
         </div>
 
         <div class="wrapper">
-            <div class="one"><img src = "" class="testing" width = "110" height = "110"></div>
-            <div class="one"></div>
-            <div class="one"></div>
+            <div class="one"><img src = "" class="testing" width = "110" height = "110"><div class = "artist">Hello</div></div>
+            <div class="one"><img src = "" class="testing" width = "110" height = "110"><div class = "artist">Hello</div></div>
+            <div class="one"><img src = "" class="testing" width = "110" height = "110"><div class = "artist">Hello</div></div>
         </div>
+        
+
+
         
         
 
@@ -54,15 +59,26 @@
         </div>
        
         <script>
-            let firstImage = document.querySelector(".testing");
+            
+            let firstImage = document.querySelectorAll(".testing");
+            let artist = document.querySelectorAll(".artist");
 
-            (async() =>{
-            let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE");
-            let info = await response.json();
-            firstImage.src = info.urls.regular;
+            
+            firstImage.forEach((image, index) => {
+                (async() =>{
+                    let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE");
+                    let info = await response.json();
+                    image.src = info.urls.regular;
+                    artist[index].innerHTML = info.user.first_name;
+                    console.log(info);
+                })();
+            })
+            
+            
+            
+            
 
-            console.log(info);
-            })();
+            
 
             
 
@@ -99,7 +115,7 @@
                     }
                 } else //scrolling up
                 {
-                    
+
                     
                     
 
