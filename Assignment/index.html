@@ -12,10 +12,10 @@
     
         <nav> 
             <div class = "buy">
-                <a href = "https://www.indiegogo.com/projects/the-first-bugatti-smartwatch" target = "_blank" rel = "noopener" style="opacity: 1; transform: translate(0px, 0px);">BUY ON INDIEGOGO</a>
+                <a href = "https://www.indiegogo.com/projects/the-first-bugatti-smartwatch" target = "_blank" rel = "noopener">BUY ON INDIEGOGO</a>
             </div>
             <div class = "logo">
-                <img src = "Assets/img/Logo.png" width = "110" height = "55">
+                <img src = "Assets/img/newLogo.png" width = "110" height = "55">
             </div>
             <div class = "faq">FAQ</div>  
         </nav>
@@ -23,14 +23,11 @@
         <div class = "firstSpace"></div>
         <div class="rotate">KANYEWEST</div>
             
-        <div class = "mainCar">
-                   
-
-            
-            <div class = "handWatch"></div>  
+        <div class = "first-car">
+             <div class = "second-car"></div>  
         </div>
                 
-        <div class = "black-space"></div>
+    
 
         <div class = "trio-text">
             <div class = "trio1">BUGATTI</div>
@@ -40,11 +37,11 @@
 
         <div class="wrapper">
             <div class="one"><img src = "" class="testing" width = "110" height = "110"></div>
-            <div class="two"></div>
-            <div class="three"></div>
+            <div class="one"></div>
+            <div class="one"></div>
         </div>
         
-        <div class = "test"></div>
+        
 
         <div class = "small-Grid">
             <div class="first-grid-column">
@@ -54,70 +51,62 @@
                 <div class = "space-1">4</div>
                 <div class = "space-1">5</div>
             </div>
-            
-            
-
-
         </div>
        
         <script>
             let firstImage = document.querySelector(".testing");
-/**
+
             (async() =>{
             let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE");
             let info = await response.json();
             firstImage.src = info.urls.regular;
 
             console.log(info);
-            })();*/
+            })();
 
             
 
 
 
-            let kanye = document.querySelector(".mainCar");
-            let handWatch = document.querySelector(".handWatch");
-            let boxInfo = kanye.getBoundingClientRect();
-            let watchBoxInfo = handWatch.getBoundingClientRect();
-            console.log(boxInfo);
-            let pageY = boxInfo.height;
+            let firstCar = document.querySelector(".first-car");
+            let secondCar = document.querySelector(".second-car");
+            let firstCarBoxInfo = firstCar.getBoundingClientRect();
+            let secondCarBoxInfo = secondCar.getBoundingClientRect();
+            console.log(firstCarBoxInfo);
+            let pageY = firstCarBoxInfo.height;
             let amount = 1;
             let amount2 = 1;
-            /**
+            
             window.addEventListener('mousewheel', (e) =>{                
 
                 if(e.wheelDeltaY < 0){ //scrolling down
-                    let boxInfo = kanye.getBoundingClientRect();
-                    let watchBoxInfo = handWatch.getBoundingClientRect();
+                    let firstCarBoxInfo = firstCar.getBoundingClientRect();
+                    let secondCarBoxInfo = secondCar.getBoundingClientRect();
                     console.log(e.wheelDeltaY);
-                    //kanye photo isnt at the top of screen then bring watch photo across from right
-                    if(boxInfo.top > 0){
+                    //firstCar photo isnt at the top of screen then bring watch photo across from right
+                    if(firstCarBoxInfo.top > 0){
                         console.log("here");
-                        kanye.style.top = (100 - amount) + "%";
+                        firstCar.style.top = (100 - amount) + "%";
                         amount++;
-                    }else if (watchBoxInfo.left > 0){
+                    }else if (secondCarBoxInfo.left > 0){
                         console.log("hi");
-                        console.log(handWatch.style.left);
-                        handWatch.style.left = (100 - amount2) + "%";
+                        console.log(secondCar.style.left);
+                        secondCar.style.left = (100 - amount2) + "%";
                         amount2++;
-                        
-
                     }else{
-                        kanye.style.top = (100 - amount) + "%";
+                        firstCar.style.top = (100 - amount) + "%";
                         amount++;
                     }
-                    
-                    
-
                 } else //scrolling up
                 {
+                    
                     
                     
 
                 }
                         
                 
-            }); */
+            }); 
             
 
             
