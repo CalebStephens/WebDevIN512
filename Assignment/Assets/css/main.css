@@ -2,6 +2,7 @@
     body, html{
         height: 100%;
         margin:0;
+        
         background-color: black;
         
     }
@@ -138,30 +139,21 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        font-size: 100%;
     }
 
-    
-
-    .one:nth-of-type(2n){
-        position: relative;
-        display: flex;
-        border-radius: 25px;
-        width:33.33%;
-        background-color: white;  
-        margin: 30px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        bottom: 20%;
+    .one:nth-of-type(odd){
+        top: 20%;
     }
 
 
 
       .small-Grid{
+          position: relative;
           display: flex;
           justify-content: space-evenly;
-          height: 200%;
-          /*transform: rotate(-10deg); */
+          height: 500%;
+          transform: rotate(-10deg); 
           width: 100%;
           
       }
@@ -169,13 +161,13 @@
     .first-grid-column{
         display: flex;
         flex-direction: column;
-        height: 200%;
+        height: 100%;
         justify-content: space-around;
         width: 33%;
         
     }
 
-    .space-1{
+    .grid-section{
         border-radius: 25px;
         background-color: red;
         margin-bottom: 30px;
@@ -187,6 +179,20 @@
         min-width: 100%;
         min-height: 100%;
           
+    }
+    .testing{
+        height: 50%;
+        width:50%;
+        border-radius: 25px;
+    }
+
+    footer{
+        background-color: tomato;
+        color: white;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     
