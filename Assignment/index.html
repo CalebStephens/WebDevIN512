@@ -65,9 +65,10 @@
         </div>
         <div class = "video-text">Late Night Drives</div>
         </div>
-        
-        <button class = button>Back to Top</button>
-       
+
+        <div class = "buttonContainer">
+            <button class = "button">Back to Top</button>
+       </div>
 
         <footer>
             <p>Made By Caleb Stephens</p>
@@ -87,7 +88,7 @@
                     artist[index].innerHTML = info.user.first_name;
                     console.log(info);
                 })();
-            })*/
+            })
             
             
             
@@ -105,11 +106,14 @@
             let secondCarBoxInfo = secondCar.getBoundingClientRect();
             console.log(firstCarBoxInfo);
             let pageY = firstCarBoxInfo.height;
+            */
             let amount = 1;
             let amount2 = 1;
             
-            window.addEventListener('mousewheel', (e) =>{                
+            let triotest = document.querySelector(".trio1");
 
+            window.addEventListener('mousewheel', (e) =>{                
+                /**
                 if(e.wheelDeltaY < 0){ //scrolling down
                     let firstCarBoxInfo = firstCar.getBoundingClientRect();
                     let secondCarBoxInfo = secondCar.getBoundingClientRect();
@@ -135,6 +139,18 @@
                     
 
                 }
+
+                let text1BoxInfo = triotest.getBoundingClientRect();
+                let lefttest = triotest.style.right;
+                console.log(text1BoxInfo);
+
+                if(e.wheelDeltaY < 0){
+                    triotest.style.right = (50 - amount) + "%";
+                    amount++; 
+
+                }else{
+                    
+                }*/
                         
                 
             }); 
