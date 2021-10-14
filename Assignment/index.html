@@ -79,7 +79,7 @@
             let firstImage = document.querySelectorAll(".testing");
             let artist = document.querySelectorAll(".artist");
 
-            /**
+            
             firstImage.forEach((image, index) => {
                 (async() =>{
                     let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE");
@@ -88,8 +88,8 @@
                     artist[index].innerHTML = info.user.first_name;
                     console.log(info);
                 })();
-            })
-            
+            });
+            /**
             
             
             
@@ -138,19 +138,22 @@
                     
                     
 
-                }
+                }*/
 
                 let text1BoxInfo = triotest.getBoundingClientRect();
                 let lefttest = triotest.style.right;
                 console.log(text1BoxInfo);
-
+                console.log(triotest.style.right);
                 if(e.wheelDeltaY < 0){
-                    triotest.style.right = (50 - amount) + "%";
-                    amount++; 
+                        if(triotest.style.right != "0%")
+                        triotest.style.right = (50 - amount) + "%";
+                        amount++; 
+                    
+                    
 
                 }else{
                     
-                }*/
+                }
                         
                 
             }); 
