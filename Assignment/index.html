@@ -81,7 +81,7 @@
             let firstImage = document.querySelectorAll(".testing");
             let artist = document.querySelectorAll(".artist");
 
-            
+            /**
             firstImage.forEach((image, index) => {
                 (async() =>{
                     let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE");
@@ -90,7 +90,7 @@
                     artist[index].innerHTML = info.user.first_name;
                     console.log(info);
                 })();
-            });
+            });*/
             
             
             
@@ -119,6 +119,7 @@
                 if(e.wheelDeltaY < 0){ //scrolling down
                     let firstCarBoxInfo = firstCar.getBoundingClientRect();
                     let secondCarBoxInfo = secondCar.getBoundingClientRect();
+                    let value = window.scrollY;
                     console.log(e.wheelDeltaY);
                     //firstCar photo isnt at the top of screen then bring watch photo across from right
                     if(firstCarBoxInfo.top > 0){
@@ -155,6 +156,12 @@
                         
                 
             }); 
+            //back to top button
+            let button = document.querySelector(".button");
+            button.addEventListener('click', (e)=>{
+                console.log("here");
+                document.documentElement.scrollTop = 0;
+            });
             
 
             
