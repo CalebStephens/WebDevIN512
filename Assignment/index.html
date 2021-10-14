@@ -25,8 +25,10 @@
         </div>
 
         
-        <div class = "first-car"><div class = "second-car"></div> </div>
+         <div class = "first-car"><div class = "second-car"></div></div>
          
+
+
         
                 
     
@@ -89,7 +91,7 @@
                     console.log(info);
                 })();
             });
-            /**
+            
             
             
             
@@ -106,14 +108,14 @@
             let secondCarBoxInfo = secondCar.getBoundingClientRect();
             console.log(firstCarBoxInfo);
             let pageY = firstCarBoxInfo.height;
-            */
+            
             let amount = 1;
             let amount2 = 1;
             
             let triotest = document.querySelector(".trio1");
 
             window.addEventListener('mousewheel', (e) =>{                
-                /**
+                
                 if(e.wheelDeltaY < 0){ //scrolling down
                     let firstCarBoxInfo = firstCar.getBoundingClientRect();
                     let secondCarBoxInfo = secondCar.getBoundingClientRect();
@@ -132,27 +134,23 @@
                         firstCar.style.top = (100 - amount) + "%";
                         amount++;
                     }
+
+                    
                 } else //scrolling up
                 {
+                }
+                
 
-                    
-                    
-
-                }*/
-
+                
                 let text1BoxInfo = triotest.getBoundingClientRect();
                 let lefttest = triotest.style.right;
                 console.log(text1BoxInfo);
                 console.log(triotest.style.right);
                 if(e.wheelDeltaY < 0){
-                        if(triotest.style.right != "0%")
+                        if(triotest.style.right != "0%"){
                         triotest.style.right = (50 - amount) + "%";
                         amount++; 
-                    
-                    
-
-                }else{
-                    
+                    }
                 }
                         
                 
