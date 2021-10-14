@@ -1,5 +1,9 @@
 
-    body, html{
+   *{
+    font-family: "Times New Roman", Times, serif;
+   }
+
+   body, html{
         height: 100%;
         margin:0;
         
@@ -41,7 +45,6 @@
     
     .buy{
         color: white;
-        font-family: 'Montserrat', sans-serif;
         margin-left: 20px;
     }
 
@@ -54,10 +57,9 @@
     }
     .faq{
         color: white;
-        font-family: 'Helvetica', sans-serif;
         margin-right: 20px;
     }
-    .h2{
+    h2{
         font-size: 100%;
         color:white;
         z-index: 32;
@@ -70,7 +72,6 @@
 
     .rotate{
         font-size: 250px;
-        font-family: "Times New Roman", Times, serif;
         color: white;
         transform: rotate(-90deg); 
         justify-content: center;
@@ -78,14 +79,7 @@
 /*neue-haas-grotesk-display,'Helvetica' ,sans-serif*/
     }
     
-    section{
-        position: relative;
-        width: 100%;
-        height:100vh;
-        overflow: hidden;
-        top: 0;
-        background-color: white;
-    }
+    
     
     .first-car{  
         background-image: url("../img/firstCar.jpeg");
@@ -93,7 +87,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-       
+       overflow-x: hidden;
         top: 0;
         left: 0;
         right: 0;
@@ -227,7 +221,37 @@
         border-radius: 25px;
         
     }
+
+
+
+    .grid-container{
+        display:grid;
+        position: relative;
+        height: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .item{
+        background: violet;
+    }
+    .item:nth-of-type(2){
+        background: yellow;
+    }
+
+
+
+
+
+    .buttonContainer{
+        position: relative;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
     .button{
+        position: relative;
         background-color: #d71e28;
         border: none;
         text-decoration: none;
@@ -255,13 +279,7 @@
         width: 80%;
         height: 80%;
     }
-    .buttonContainer{
-        width: 100%;
-        height: 20%;
-        display: flex;
-        align-items: center;
-        justify-self: center;
-    }
+    
 
     
     
