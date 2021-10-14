@@ -126,6 +126,14 @@
         position: relative;
         right: 50%;
     }
+    .trio2{
+        position: relative;
+        left: 40%;
+    }
+    .trio3{
+        position: relative;
+        right: 30%;
+    }
     
     
     .wrapper {

@@ -122,7 +122,10 @@
             let amount = 1;
             let amount2 = 1;
             
-            let triotest = document.querySelector(".trio1");
+            let triofirst = document.querySelector(".trio1");
+            let triosecond = document.querySelector(".trio2");
+            let triothree = document.querySelector(".trio3");
+            
 
             window.addEventListener('mousewheel', (e) =>{                
                 
@@ -153,15 +156,23 @@
                 
 
                 
-                let text1BoxInfo = triotest.getBoundingClientRect();
-                let lefttest = triotest.style.right;
-                console.log(text1BoxInfo);
-                console.log(triotest.style.right);
+                
+                
+                
                 if(e.wheelDeltaY < 0){
-                        if(triotest.style.right != "0%"){
-                        triotest.style.right = (50 - amount) + "%";
+                        if(triofirst.style.right != "0%"){
+                        triofirst.style.right = (50 - amount) + "%";
                         amount++; 
-                    }
+                        }
+                        if(triosecond.style.left != "0%"){
+                        triosecond.style.left = (40 - amount ) + "%";
+                        }
+                        if(triothree.style.right != "0%"){
+                        triothree.style.right = (30 - amount) + "%";
+                        }
+                        
+                        
+                    
                 }
                         
                 
