@@ -243,10 +243,12 @@
     }
     .item{
         display: flex;
-        background: violet;
+        background: linear-gradient(#7D7C7B, #000);
         border-radius: 25px;
         margin: 2%;
         height: 90%;
+        align-items: center;
+        justify-content: center;
         
     }
 
@@ -255,6 +257,9 @@
         
         height: 100%;
         width: 100%;
+    }
+    .item h2{
+        font-size: 400%;
     }
     
 
