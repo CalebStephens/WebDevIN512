@@ -24,6 +24,8 @@
 
         ul#cards{
             display:flex;
+            flex-wrap: wrap;
+            
         }
 
         ul#cards li{            
@@ -34,6 +36,9 @@
             padding: 20px;
             border-radius: 20px;
             display: flex;
+            
+            overflow: hidden;
+            
         }
 
         ul#cards li img{
@@ -82,7 +87,7 @@
                 email.innerHTML = user.email;
 
                 //add bold element to container element
-                container.append(bold);
+                container.append(bold, email);
                 //adds elements to the feild li
                 li.append(img, container);
                 //adds feild li which contains an li to the html id of cards.
@@ -132,7 +137,18 @@
 
         .earth{
             background:lightgreen;
-        }        
+        }    
+        .boss.fire h2{
+            color : firebrick;
+        }
+
+        .boss .skills li:last-child{
+            color:white;
+        }
+
+        div:not(.water) .skills{
+            list-style: square;
+        }    
     
     </style>
 
@@ -188,7 +204,14 @@
 
         /* PUT YOUR ANSWER FOR QUESTION 3 HERE */
 
-        console.log(newString);
+        
+        let strArr = string.split(",");
+        
+        strArr[2] = "SONIC";
+        
+        newString = strArr.join();
+        
+
     
     </script>
 
@@ -220,6 +243,20 @@
 
         /* PUT YOUR ANSWER FOR QUESTION 4 HERE */
 
+        let old = [];
+        let young = [];
+        all.forEach(person =>{
+            if(person.age >= 18){
+                old.push(person);
+            }else{
+                young.push(person);
+            }
+        });
+
+
+        console.log(old);
+        console.log(young);
+
 
 
     </script>
@@ -239,6 +276,16 @@
     <style>
 
         /* WRITE YOUR ANSWER FOR QUESTION 5 HERE */ 
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+        .fancy:first-letter{
+            font-family: 'UnifrakturMaguntia', cursive;
+            color: red;
+            font-size: 400%;
+            float: left;
+        }
+
+        
 
 
     </style>
@@ -298,7 +345,7 @@
 
         /* WRITE YOUR ANSWER FOR QUESTION 6 HERE */
 
-        document.querySelector("input.typewriter").addEventListener("keydown", e => {
+        document.querySelector("input.typewriter").addEventListener("keyup", e => {
             document.querySelector("div.page").innerHTML = e.target.value;
         });
     
@@ -338,6 +385,7 @@
         /* WRITE YOUR STYLES FOR QUESTION 7 IN HERE */
 
         .wrapper {
+            display: grid;
             grid-gap: 1rem;
             grid-template-columns: repeat(3, 1fr);
             max-width: 900px;
@@ -354,6 +402,10 @@
         .card {
             background: lightpink;
             padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
         }
         
     
@@ -374,6 +426,8 @@
         1. Explain why the following code produces an 'undefined' result. (1 mark)
 
             ==> WRITE YOUR ANSWER FOR 1. HERE
+            Because the number is anything between 0 and dogs length even 1.222 etc.
+            So the code is lokking for dog at position [1.222] etc.
 
 
 
@@ -387,7 +441,7 @@
 
         let dogs = ["Fido","Spot","Charlie","Spike","Barnabas"];
 
-        let random = Math.random() * dogs.length;
+        let random = Math.floor(Math.random() * dogs.length);
         
         console.log(random);
         console.log(dogs[random]);  // THIS LINE PRODUCES 'undefined' IN THE CONSOLE      
