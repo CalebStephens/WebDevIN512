@@ -1,7 +1,12 @@
 
-    body, html{
+   *{
+    font-family: "Times New Roman", Times, serif;
+   }
+
+   body, html{
         height: 100%;
         margin:0;
+        
         background-color: black;
         
     }
@@ -25,85 +30,88 @@
         z-index: 9999; 
     }
 
+    a:link {
+        color: red;
+      }
     
+      a:hover{
+          color: tomato;
+      }
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
     
     .buy{
         color: white;
-        font-family: 'Montserrat', sans-serif;
         margin-left: 20px;
     }
 
     .logo{
-        margin: 10px 130px 10px 10px;
+        margin-right: 3.5%;
     }
     
+    h1{
+        font-size:100%;
+    }
     .faq{
         color: white;
-        font-family: 'Helvetica', sans-serif;
         margin-right: 20px;
     }
+    h2{
+        font-size: 100%;
+        color:white;
+        z-index: 32;
+    }   
 
-    .firstSpace{
-        
-        
-        
+    .container{
+        position: relative;
+        height: 150%;
     }
 
     .rotate{
         font-size: 250px;
-        font-family: "Times New Roman", Times, serif;
         color: white;
         transform: rotate(-90deg); 
         justify-content: center;
+    
 /*neue-haas-grotesk-display,'Helvetica' ,sans-serif*/
     }
     
     
-    .mainCar{  
-        background-image: url("../img/kanyeMain.jpeg");
+    
+    .first-car{  
+        background-image: url("../img/firstCar.jpeg");
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-       
-        top: 100%;
+       overflow-x: hidden;
+        top: 0;
         left: 0;
         right: 0;
         
-        position: fixed;
+        position: relative;
     }
 
-    .handWatch{  
-        background-image: url("../img/Bugatti-Smartwatches.jpeg");
+    .second-car{  
+        background-image: url("../img/secondCar.jpeg");
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
         top: 0;
-        left: 100%;
-        
+        left: 100%; 
         bottom: 0;
         position:absolute;
-    }
-    .black-space{
-        height: 550%;
-        
-    }
-
-    .firstSpace{
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
     }
 
     .trio-text{
         color: white;
         display: flex;
         height: 100%;
-        
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -113,51 +121,56 @@
         font-size: 7em;
         
     }
+
+    .trio1{
+        position: relative;
+        right: 50%;
+    }
+    .trio2{
+        position: relative;
+        left: 40%;
+    }
+    .trio3{
+        position: relative;
+        right: 30%;
+    }
+    
     
     .wrapper {
-        
+        position: relative;
         display: flex;
         justify-content: space-around;
-        height: 75%;
-        
-       
-        
+        height: 100%;
+        margin-top: 10%;
+          
     }
+    
     .one{
+        position: relative;
         display: flex;
         border-radius: 25px;
         width:33.33%;
+        height: 75%;
         background-color: white;  
         margin: 30px;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        font-size: 100%;
     }
 
-    .two{
-        width:33.33%;
-        border-radius: 25px;
-        background-color: red;
-        margin: 30px;
-        
+    .one:nth-of-type(odd){
+        top: 20%;
     }
-    .three{
-        
-        width:33.33%;
-        background-color: white;
-        border-radius: 25px;
-        margin: 30px;
-      }
 
-      .test{
-          height: 100%;
-      }
+
 
       .small-Grid{
+          position: relative;
           display: flex;
           justify-content: space-evenly;
-          height: 200%;
-          /*transform: rotate(-10deg); */
+          height: 500%;
+          transform: rotate(-10deg); 
           width: 100%;
           
       }
@@ -165,19 +178,134 @@
     .first-grid-column{
         display: flex;
         flex-direction: column;
-        height: 200%;
+        height: 100%;
         justify-content: space-around;
         width: 33%;
         
     }
 
-    .space-1{
+    .grid-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 25px;
         background-color: red;
         margin-bottom: 30px;
         height: 70%;
         width: 100%;
     }
+    .outer{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        color: white;
+    }
+
+    .video-container{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    video{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        
+
+    }
+    .video-text{
+        position: absolute;
+        color: white;
+    }
+    
+    .testing{
+        height: 50%;
+        width: 50%;
+        border-radius: 25px;
+        
+    }
+
+
+
+    .grid-container{
+        display:grid;
+        position: relative;
+        height: 300%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+        
+        
+    }
+    .item{
+        display: flex;
+        background: linear-gradient(#7D7C7B, #000);
+        border-radius: 25px;
+        margin: 2%;
+        height: 90%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .item img{
+        border-radius: 25px;
+        
+        height: 100%;
+        width: 100%;
+    }
+    .item h2{
+        font-size: 400%;
+    }
+    
+
+
+
+
+
+    .buttonContainer{
+        position: relative;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+    .button{
+        position: relative;
+        background-color: #d71e28;
+        border: none;
+        text-decoration: none;
+        border-radius: 70px;
+        width: 70%;
+        height: 80%; 
+        
+    }
+
+    .button:hover{
+        background-color: white;
+    }
+
+    footer{
+        
+        background-color: tomato;
+        color: white;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid-section img{
+        width: 80%;
+        height: 80%;
+    }
+    
+
     
     
       
