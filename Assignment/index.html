@@ -101,7 +101,7 @@
                         image.src = info[index].urls.regular;
                     });
                     
-                    artist[index].innerHTML = info.user.first_name;
+                    //artist[index].innerHTML = info.user.first_name;
                     
                 })();
             
@@ -144,16 +144,17 @@
                        // console.log(firstCarBoxInfo.top, "yes");
                         console.log("here");
                         firstCar.style.top = (100 - amount) + "%";
-                        amount+=2;
-                    }else if (parseInt(secondCar.style.top.replace("%","")) > 0){
+                        amount+=1;
+   
+                    }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && secondCar.style.left.replace("%","") > 0){
                         console.log("hi");
                         console.log(secondCar.style.left);
                         secondCar.style.left = (100 - amount2) + "%";
-                        amount2+=2;
-                    }else{
+                        amount2+=1;
+                    }/*else{
                         firstCar.style.top = (100 - amount) + "%";
                         amount+=2;
-                    }
+                    }*/
                 } else //scrolling up
                 {
                     if(parseInt(firstCar.style.top.replace("%","")) < 0){
