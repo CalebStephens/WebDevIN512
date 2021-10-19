@@ -6,9 +6,9 @@
    body, html{
         height: 100%;
         margin:0;
-        
+        scroll-behavior: smooth;
         background-color: black;
-        
+        overflow: hidden;
     }
 
     main{
@@ -88,11 +88,11 @@
         background-repeat: no-repeat;
         background-size: cover;
        overflow-x: hidden;
-        top: 0;
+        top: 100%;
         left: 0;
         right: 0;
         
-        position: relative;
+        position: absolute;
     }
 
     .second-car{  

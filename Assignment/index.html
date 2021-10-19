@@ -91,7 +91,7 @@
             let firstImage = document.querySelectorAll(".testing");
             let artist = document.querySelectorAll(".artist");
 
-            /**
+            
             firstImage.forEach((image, index) => {
                 (async() =>{
                     let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE");
@@ -100,7 +100,7 @@
                     artist[index].innerHTML = info.user.first_name;
                     console.log(info);
                 })();
-            });*/
+            });
             
             
             
@@ -114,10 +114,11 @@
 
             let firstCar = document.querySelector(".first-car");
             let secondCar = document.querySelector(".second-car");
-            let firstCarBoxInfo = firstCar.getBoundingClientRect();
-            let secondCarBoxInfo = secondCar.getBoundingClientRect();
-            console.log(firstCarBoxInfo);
-            let pageY = firstCarBoxInfo.height;
+           /* let firstCarBoxInfo = firstCar.getBoundingClientRect();
+            let secondCarBoxInfo = secondCar.getBoundingClientRect();*/
+            firstCar.style.top = "100%";
+            secondCar.style.left = "100%";
+        //    let pageY = firstCarBoxInfo.height;
             
             let amount = 1;
             let amount2 = 1;
@@ -127,31 +128,44 @@
             let triothree = document.querySelector(".trio3");
             
 
-            window.addEventListener('mousewheel', (e) =>{                
+            window.addEventListener('wheel', (e) =>{                
                 
                 if(e.wheelDeltaY < 0){ //scrolling down
-                    let firstCarBoxInfo = firstCar.getBoundingClientRect();
-                    let secondCarBoxInfo = secondCar.getBoundingClientRect();
-                    let value = window.scrollY;
-                    console.log(e.wheelDeltaY);
+                 /*   let firstCarBoxInfo = firstCar.getBoundingClientRect();
+                    let secondCarBoxInfo = secondCar.getBoundingClientRect();*/
+                    console.log(firstCar.style.top,"1");
                     //firstCar photo isnt at the top of screen then bring watch photo across from right
-                    if(firstCarBoxInfo.top > 0){
+                    
+                    if(parseInt(firstCar.style.top.replace("%","")) > 0){
+                       // console.log(firstCarBoxInfo.top, "yes");
                         console.log("here");
                         firstCar.style.top = (100 - amount) + "%";
-                        amount++;
-                    }else if (secondCarBoxInfo.left > 0){
+                        amount+=2;
+                    }else if (parseInt(secondCar.style.top.replace("%","")) > 0){
                         console.log("hi");
                         console.log(secondCar.style.left);
                         secondCar.style.left = (100 - amount2) + "%";
-                        amount2++;
+                        amount2+=2;
                     }else{
                         firstCar.style.top = (100 - amount) + "%";
-                        amount++;
+                        amount+=2;
                     }
-
-                    
                 } else //scrolling up
                 {
+                    if(parseInt(firstCar.style.top.replace("%","")) < 0){
+                        console.log("here");
+                        firstCar.style.top = (100 - amount) + "%";
+                        amount-=2;
+                    }
+                    /*else if (secondCarBoxInfo.left > 0){
+                        console.log("hi");
+                        console.log(secondCar.style.left);
+                        secondCar.style.left = (100 - amount2) + "%";
+                        amount2+2;
+                    }else{
+                        firstCar.style.top = (100 - amount) + "%";
+                        amount+2;
+                    }*/
                 }
                 
 
