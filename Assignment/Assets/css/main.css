@@ -9,6 +9,7 @@
         scroll-behavior: smooth;
         background-color: black;
         overflow: hidden;
+        position: relative;
         
     }
 
@@ -54,8 +55,9 @@
     }
     
     h1{
-        font-size:100%;
+        font-size: 700%;
     }
+
     .faq{
         color: white;
         margin-right: 20px;
@@ -67,6 +69,7 @@
     }   
 
     .container{
+        position: absolute;
         height: 100%;
         width: 100%;
         display: flex;
@@ -78,7 +81,10 @@
     .rotate{
         position: absolute;
         color: white;
-        transform: rotate(-90deg); 
+        transform: rotate(-90deg);
+        font-size: 200%; 
+      
+        
     }
     
     
@@ -121,6 +127,8 @@
         justify-content: center;
         flex-direction: column;
         font-size: 7em;
+        position: absolute;
+        top: 100%;
         
     }
 
