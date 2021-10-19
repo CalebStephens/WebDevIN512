@@ -62,7 +62,7 @@
 
     <script>
     let button = document.querySelector("#generate");
-        /* WRITE YOUR CODE HERE! *//*
+        /* WRITE YOUR CODE HERE! */
         
         
         button.addEventListener('click', (e) =>{
@@ -81,14 +81,14 @@
                 player.innerHTML = info.results[test].name;
                 species[index].innerHTML = info.results[test].species;
                 type[index].innerHTML = info.results[test].type;
-                avatar[index].innerHTML = "<img src =" + info.results[test].image + ">";
+                avatar[index].style.backgroundImage = `url(${info.results[test].image})`;
 
 
                 })();
             });
 
             
-
+/*
                 Good - I mean, it works, the broad strokes are correct... 
                 There are some things I would change though, in future code...
                 The hardcoded 34 and 20 are problematic and unnecessary - for example, the final page
@@ -103,7 +103,7 @@
                 background-image property.
 
                 Anyways, a good job nonetheless - have a look at my (possible) solution below,
-                for some ideas:*/
+                for some ideas:
 
                     document.querySelector("#generate").addEventListener("click", e => {
                         fetch(`https://rickandmortyapi.com/api/character`)
@@ -125,7 +125,7 @@
                             })
                         })            
                     })
-
+*/
             
             
             /**
@@ -148,8 +148,8 @@
                     player1Species.innerHTML = info.results[test].species;
                     player1Type.innerHTML = info.results[test].type;
                     
-            })();
-        });*/
+            })();;*/
+        })
 
 
     </script>

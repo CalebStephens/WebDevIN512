@@ -192,7 +192,10 @@
         button.addEventListener("click", (e) =>{
             e.preventDefault();
             let val = document.querySelector("#name").value;
-            document.querySelector("#output_div").append(val);
+            let div = document.createElement("div");
+            div.innerHTML = val;
+            document.querySelector("#output_div").append(div);
+            
             
         });
         
