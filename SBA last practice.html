@@ -80,7 +80,7 @@
                 player.innerHTML = info.results[test].name;
                 species[index].innerHTML = info.results[test].species;
                 type[index].innerHTML = info.results[test].type;
-                avatar[index].innerHTML = "<img src =" + info.results[test].image + ">";
+                avatar[index].style.backgroundImage = `url(${info.results[test].image})`;
 
 
                 })();
