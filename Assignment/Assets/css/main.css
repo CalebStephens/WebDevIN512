@@ -67,17 +67,18 @@
     }   
 
     .container{
-        position: relative;
-        height: 150%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
     }
 
     .rotate{
-        font-size: 250px;
+        position: absolute;
         color: white;
         transform: rotate(-90deg); 
-        justify-content: center;
-    
-/*neue-haas-grotesk-display,'Helvetica' ,sans-serif*/
     }
     
     

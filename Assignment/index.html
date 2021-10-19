@@ -21,7 +21,7 @@
         </nav>
         
         <div class = "container">
-        <div class="rotate"><h1>CARS</h1></div>
+        <div class="rotate">CARS</div>
         </div>
 
         
@@ -92,7 +92,7 @@
             let artist = document.querySelectorAll(".artist");
 
             
-            
+            /*
                 (async() =>{
                     let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE&count=3");
                     let info = await response.json();
@@ -103,7 +103,7 @@
                     
                     //artist[index].innerHTML = info.user.first_name;
                     
-                })();
+                })();*/
             
             
             
@@ -151,10 +151,11 @@
                         console.log(secondCar.style.left);
                         secondCar.style.left = (100 - amount2) + "%";
                         amount2+=1;
-                    }/*else{
+                    }else{
                         firstCar.style.top = (100 - amount) + "%";
-                        amount+=2;
-                    }*/
+                        secondCar.style.top = (100 - amount2) + "%";
+                        amount+=1;
+                    }
                 } else //scrolling up
                 {
                     if(parseInt(firstCar.style.top.replace("%","")) < 0){
