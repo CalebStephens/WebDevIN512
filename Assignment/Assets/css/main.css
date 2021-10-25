@@ -86,6 +86,11 @@
       
         
     }
+    .scroll-container{
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+    }
     
     
     
@@ -105,11 +110,11 @@
 
     .second-car{  
         background-image: url("../img/secondCar.jpeg");
-        height: 100%;
+        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
+        width: 100vw;
         top: 0;
         left: 100%; 
         bottom: 0;
@@ -119,7 +124,7 @@
     .trio-text{
         color: white;
         display: flex;
-        height: 100%;
+        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -146,12 +151,13 @@
     }
     
     
-    .wrapper {
-        position: relative;
+    .wrapper-api{
+        position: absolute;
         display: flex;
         justify-content: space-around;
-        height: 100%;
+        height: 100vh;
         margin-top: 10%;
+        top: 100%;
           
     }
     
@@ -159,8 +165,8 @@
         position: relative;
         display: flex;
         border-radius: 25px;
-        width:33.33%;
-        height: 75%;
+        width:33.33vw;
+        height: 75vh;
         background-color: white;  
         margin: 30px;
         align-items: center;
@@ -173,16 +179,14 @@
         top: 20%;
     }
 
-
-
       .small-Grid{
-          position: relative;
+          position: absolute;
           display: flex;
           justify-content: space-evenly;
-          height: 500%;
+          height: 500vh;
           transform: rotate(-10deg); 
-          width: 100%;
-          
+          width: 100vw;
+          top: 100%;
       }
 
     .first-grid-column{
@@ -205,13 +209,15 @@
         width: 100%;
     }
     .outer{
-        width:100%;
-        height:100%;
+        position: absolute;
+        width:100vw;
+        height:10vh;
         display:flex;
         flex-direction:column;
         justify-content:center;
         align-items: center;
         color: white;
+        top:100%;
     }
 
     .video-container{
@@ -244,10 +250,11 @@
 
     .grid-container{
         display:grid;
-        position: relative;
-        height: 300%;
+        position: absolute;
+        height: 300vh;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr ;
+        top: 100%;
         
         
     }
@@ -278,12 +285,13 @@
 
 
     .buttonContainer{
-        position: relative;
-        width: 100%;
-        height: 20%;
+        position: absolute;
+        width: 100vw;
+        height: 20vh;
         display: flex;
         align-items: center;
         justify-self: center;
+        top:100%;
     }
     .button{
         position: relative;
@@ -301,13 +309,14 @@
     }
 
     footer{
-        
+        position: absolute;
         background-color: tomato;
         color: white;
-        height: 40%;
+        height: 40vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        top:100%;
     }
 
     .grid-section img{
