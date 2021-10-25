@@ -38,7 +38,7 @@
             <div class = "trio2">YOUR DREAM</div>
             <div class = "trio3">CAR BE?</div>
         </div>
-        
+
         <div class = "scroll-container">
         <div class="wrapper-api">
             <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
@@ -120,6 +120,7 @@
 
             let firstCar = document.querySelector(".first-car");
             let secondCar = document.querySelector(".second-car");
+            let bigScroll = document.querySelector(".scroll-container");
            /* let firstCarBoxInfo = firstCar.getBoundingClientRect();
             let secondCarBoxInfo = secondCar.getBoundingClientRect();*/
             firstCar.style.top = "100%";
@@ -128,6 +129,7 @@
             
             let amount = 1;
             let amount2 = 1;
+            let amount3 = 1;
             
             let triofirst = document.querySelector(".trio1");
             let triosecond = document.querySelector(".trio2");
@@ -153,10 +155,13 @@
                         console.log(secondCar.style.left);
                         secondCar.style.left = (100 - amount2) + "%";
                         amount2+=1;
-                    }else{
+                    }else if (parseInt(firstCar.style.top.replace("%","")) >= -100 && secondCar.style.left.replace("%","") == 0){
                         firstCar.style.top = (100 - amount) + "%";
                         secondCar.style.top = (100 - amount2) + "%";
                         amount+=1;
+                    }else{
+                        bigScroll.style.top = (100 - amount3) + "%";
+                        amount3 += 1;
                     }
                 } else //scrolling up
                 {
@@ -177,10 +182,6 @@
                 }
                 
 
-                
-                
-                
-                
                 if(e.wheelDeltaY < 0){
                         if(triofirst.style.right != "0%"){
                         triofirst.style.right = (50 - amount) + "%";
