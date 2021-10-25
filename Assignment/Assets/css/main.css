@@ -88,8 +88,7 @@
     }
     .scroll-container{
         position: relative;
-        height: 100vh;
-        width: 100vw;
+        top: 100%;
     }
     
     
@@ -133,7 +132,7 @@
         flex-direction: column;
         font-size: 7em;
         position: absolute;
-        top: 100%;
+        left: 100%;
         
     }
 
@@ -152,12 +151,12 @@
     
     
     .wrapper-api{
-        position: absolute;
+        position: relative;
         display: flex;
         justify-content: space-around;
         height: 100vh;
         margin-top: 10%;
-        top: 100%;
+        
           
     }
     
@@ -180,13 +179,13 @@
     }
 
       .small-Grid{
-          position: absolute;
+          position: relative;
           display: flex;
           justify-content: space-evenly;
           height: 500vh;
           transform: rotate(-10deg); 
           width: 100vw;
-          top: 100%;
+          
       }
 
     .first-grid-column{
@@ -209,7 +208,7 @@
         width: 100%;
     }
     .outer{
-        position: absolute;
+        position: relative;
         width:100vw;
         height:10vh;
         display:flex;
@@ -217,7 +216,7 @@
         justify-content:center;
         align-items: center;
         color: white;
-        top:100%;
+        
     }
 
     .video-container{
@@ -250,11 +249,11 @@
 
     .grid-container{
         display:grid;
-        position: absolute;
+        position: relative;
         height: 300vh;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr ;
-        top: 100%;
+       
         
         
     }
@@ -271,7 +270,6 @@
 
     .item img{
         border-radius: 25px;
-        
         height: 100%;
         width: 100%;
     }
@@ -285,13 +283,13 @@
 
 
     .buttonContainer{
-        position: absolute;
+        position: relative;
         width: 100vw;
         height: 20vh;
         display: flex;
         align-items: center;
         justify-self: center;
-        top:100%;
+        
     }
     .button{
         position: relative;
@@ -309,14 +307,14 @@
     }
 
     footer{
-        position: absolute;
+        position: relative;
         background-color: tomato;
         color: white;
         height: 40vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        top:100%;
+        
     }
 
     .grid-section img{
