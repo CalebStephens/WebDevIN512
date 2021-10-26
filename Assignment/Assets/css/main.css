@@ -69,14 +69,14 @@
     }   
 
     .container{
-        position: absolute;
+        position: relative;
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction:column;
         align-items: center;
         justify-content: center;
-        
+        top: 0%;
     }
 
     .rotate{
@@ -86,6 +86,10 @@
         font-size: 200%; 
       
         
+    }
+    .scroll-container{
+        position: relative;
+        top: 100%;
     }
     
     
@@ -106,11 +110,11 @@
 
     .second-car{  
         background-image: url("../img/secondCar.jpeg");
-        height: 100%;
+        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
+        width: 100vw;
         top: 0;
         left: 100%; 
         bottom: 0;
@@ -120,7 +124,7 @@
     .trio-text{
         color: white;
         display: flex;
-        height: 100%;
+        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -129,7 +133,7 @@
         flex-direction: column;
         font-size: 7em;
         position: absolute;
-        top: 100%;
+        left: 100%;
         
     }
 
@@ -147,12 +151,13 @@
     }
     
     
-    .wrapper {
+    .wrapper-api{
         position: relative;
         display: flex;
         justify-content: space-around;
-        height: 100%;
+        height: 100vh;
         margin-top: 10%;
+        
           
     }
     
@@ -160,8 +165,8 @@
         position: relative;
         display: flex;
         border-radius: 25px;
-        width:33.33%;
-        height: 75%;
+        width:33.33vw;
+        height: 75vh;
         background-color: white;  
         margin: 30px;
         align-items: center;
@@ -174,15 +179,13 @@
         top: 20%;
     }
 
-
-
       .small-Grid{
           position: relative;
           display: flex;
           justify-content: space-evenly;
-          height: 500%;
+          height: 500vh;
           transform: rotate(-10deg); 
-          width: 100%;
+          width: 100vw;
           
       }
 
@@ -206,13 +209,15 @@
         width: 100%;
     }
     .outer{
-        width:100%;
-        height:100%;
+        position: relative;
+        width:100vw;
+        height:100vh;
         display:flex;
         flex-direction:column;
         justify-content:center;
         align-items: center;
         color: white;
+        
     }
 
     .video-container{
@@ -246,9 +251,10 @@
     .grid-container{
         display:grid;
         position: relative;
-        height: 300%;
+        height: 300vh;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr ;
+       
         
         
     }
@@ -265,7 +271,6 @@
 
     .item img{
         border-radius: 25px;
-        
         height: 100%;
         width: 100%;
     }
@@ -280,11 +285,12 @@
 
     .buttonContainer{
         position: relative;
-        width: 100%;
-        height: 20%;
+        width: 100vw;
+        height: 20vh;
         display: flex;
         align-items: center;
         justify-self: center;
+        
     }
     .button{
         position: relative;
@@ -302,13 +308,14 @@
     }
 
     footer{
-        
+        position: relative;
         background-color: tomato;
         color: white;
-        height: 40%;
+        height: 40vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
 
     .grid-section img{
