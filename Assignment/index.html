@@ -66,7 +66,7 @@
             </video>
             
         </div>
-        <div class = "video-text">Late Night Drives</div>
+            <div class = "video-text">Late Night Drives</div>
         </div>
 
         <div class="grid-container">
@@ -121,60 +121,49 @@
             let firstCar = document.querySelector(".first-car");
             let secondCar = document.querySelector(".second-car");
             let bigScroll = document.querySelector(".scroll-container");
+            let titleScroll = document.querySelector(".container");
            /* let firstCarBoxInfo = firstCar.getBoundingClientRect();
             let secondCarBoxInfo = secondCar.getBoundingClientRect();*/
             firstCar.style.top = "100%";
             secondCar.style.left = "100%";
         //    let pageY = firstCarBoxInfo.height;
-            
+            let title = 1;
             let firstCarScrollAmount = 1;
-            let amount2 = 1;
+            let leftScrollAmount = 1;
             let amount3 = 1;
             
             let triofirst = document.querySelector(".trio1");
             let triosecond = document.querySelector(".trio2");
             let triothree = document.querySelector(".trio3");
-            
-
+        
             window.addEventListener('wheel', (e) =>{                
                 
                 if(e.wheelDeltaY < 0){ //scrolling down
-                    console.log(firstCar.style.top,"1");
                     //firstCar photo isnt at the top of screen then bring watch photo across from right
-                    
-                    if(parseInt(firstCar.style.top.replace("%","")) > 0){
-                       // console.log(firstCarBoxInfo.top, "yes");
-                        console.log("here");
-                        firstCar.style.top = (100 - firstCarScrollAmount) + "%";
-                        firstCarScrollAmount+=1;
-                    }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && secondCar.style.left.replace("%","") > 0){
-                        console.log("hi");
-                        console.log(secondCar.style.left);
-                        secondCar.style.left = (100 - amount2) + "%";
-                        amount2+=1;
-                    }else if (secondCar.style.left.replace("%","") == 0){
-                        firstCar.style.top = (100 - firstCarScrollAmount) + "%";
-                        secondCar.style.top = (100 - firstCarScrollAmount) + "%";
+                    if(parseInt(titleScroll.style.top.replace("%","")) >= 0){
+                        titleScroll.style.top = (0 - title) + "%";
+                        title += 1;
+                    }else if(parseInt(firstCar.style.top.replace("%","")) > 0){
+                        firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 1) + "%";
+                    }else if (parseInt(firstCar.style.top.replace("%","")) == 0){
+                        secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) - 1) + "%";
+                    }else if (parseInt(secondCar.style.left.replace("%","")) <= 0){
+                        firstCar.style.left = (100 - firstCarScrollAmount) + "%";
+                        secondCar.style.left = (100 - firstCarScrollAmount) + "%";
                         firstCarScrollAmount += 1;
-                        console.log(firstCar.style.top + " FIRST");
-                        console.log(secondCar.style.top + " second");
-                        if(parseInt(firstCar.style.top.replace("%","")) < -100){
-                            bigScroll.style.top = (100 - amount3) + "%";
-                            console.log(bigScroll.style.top);
-                            amount3 += 2;
-                        }
-                    }else{
-                        bigScroll.style.top = (100 - amount3) + "%";
-                        console.log(bigScroll.style.top);
-                        amount3 += 2;
-                    }
+                    }else if(parseInt(firstCar.style.left.replace("%","")) == -100)
+                       
+                            console.log(parseInt(bigScroll.style.top.replace("%","")));
+                            bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 1) + "%";   
+                    
                 } else //scrolling up
                 {
-                    if (bigScroll.style.top.replace("%","") < 0){
+                
+                    if (parseInt(bigScroll.style.top.replace("%","")) != 100){
                         console.log("hi");
                         console.log(secondCar.style.left);
-                        secondCar.style.left = (100 - amount2) + "%";
-                        amount2+=2;
+                        bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 1) + "%";
+                        leftScrollAmount+=2;
                     }else if(parseInt(firstCar.style.top.replace("%","")) < 0){
                         console.log("here");
                         firstCar.style.top = (100 - amount) + "%";
