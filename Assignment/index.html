@@ -94,7 +94,7 @@
             let artist = document.querySelectorAll(".artist");
 
             
-            /*
+            /**/
                 (async() =>{
                     let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE&count=3");
                     let info = await response.json();
@@ -105,7 +105,7 @@
                     
                     //artist[index].innerHTML = info.user.first_name;
                     
-                })();*/
+                })();
             
             
             
@@ -155,13 +155,20 @@
                         console.log(secondCar.style.left);
                         secondCar.style.left = (100 - amount2) + "%";
                         amount2+=1;
-                    }else if (parseInt(firstCar.style.top.replace("%","")) >= -100 && secondCar.style.left.replace("%","") == 0){
+                    }else if (secondCar.style.left.replace("%","") == 0){
                         firstCar.style.top = (100 - amount) + "%";
                         secondCar.style.top = (100 - amount2) + "%";
                         amount+=1;
+                        console.log(firstCar.style.top);
+                        if(parseInt(firstCar.style.top.replace("%","")) < -100){
+                            bigScroll.style.top = (100 - amount3) + "%";
+                            console.log(bigScroll.style.top);
+                            amount3 += 2;
+                        }
                     }else{
                         bigScroll.style.top = (100 - amount3) + "%";
-                        amount3 += 1;
+                        console.log(bigScroll.style.top);
+                        amount3 += 2;
                     }
                 } else //scrolling up
                 {
@@ -169,13 +176,13 @@
                         console.log("here");
                         firstCar.style.top = (100 - amount) + "%";
                         amount-=2;
-                    }
+                    }/*
                     else if (secondCarBoxInfo.left > 0){
                         console.log("hi");
                         console.log(secondCar.style.left);
                         secondCar.style.left = (100 - amount2) + "%";
                         amount2+=2;
-                    }/*else{
+                    }else{
                         firstCar.style.top = (100 - amount) + "%";
                         amount+2;
                     }*/
