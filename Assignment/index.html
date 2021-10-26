@@ -128,6 +128,7 @@
             secondCar.style.left = "100%";
             firstCar.style.left = "0%";
             titleScroll.style.top = "0%";
+            bigScroll.style.top = "100%";
         //    let pageY = firstCarBoxInfo.height;
             let title = 1;
             let firstCarScrollAmount = 1;
@@ -152,8 +153,8 @@
                     }else if(parseInt(secondCar.style.left.replace("%","")) > -100){
                         secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 1) + "%";
                         firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 1) + "%";
-                        console.log(secondCar.style.left);
-                        console.log(firstCar.style.left);
+                    }else if(parseInt(secondCar.style.left.replace("%","")) == -100){
+                        bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
                     }
                 } else //scrolling up
                 {
