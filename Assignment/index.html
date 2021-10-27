@@ -28,11 +28,6 @@
          <div class = "first-car"></div>
          <div class = "second-car"></div>
 
-
-        
-                
-    
-        
         <div class = "trio-text">
             <div class = "trio1">WHAT WOULD</div>
             <div class = "trio2">YOUR DREAM</div>
@@ -97,7 +92,7 @@
             let artist = document.querySelectorAll(".artist");
 
             
-            /*;*/
+            
                 (async() =>{
                     let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE&count=3");
                     let info = await response.json();
@@ -107,20 +102,11 @@
                         artist[index].innerHTML = "By " +info[index].user.name;
                     });
                     
-                    //artist[index].innerHTML = info.user.first_name;
+                
                     
                 })();
             
-            
-            
-            
-            
-
-            
-
-            
-
-
+        
 
             let firstCar = document.querySelector(".first-car");
             let secondCar = document.querySelector(".second-car");
