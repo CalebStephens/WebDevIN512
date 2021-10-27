@@ -25,8 +25,8 @@
         </div>
 
         
-         <div class = "first-car"><div class = "second-car"></div></div>
-         
+         <div class = "first-car"></div>
+         <div class = "second-car"></div>
 
 
         
@@ -39,12 +39,15 @@
             <div class = "trio3">CAR BE?</div>
         </div>
 
+        
         <div class = "scroll-container">
+        
         <div class="wrapper-api">
             <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
             <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
             <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
         </div>
+        <div class="more-images"><h2>More Images</h2></div>
         
         
 
@@ -94,13 +97,14 @@
             let artist = document.querySelectorAll(".artist");
 
             
-            /**/
+            /*;*/
                 (async() =>{
                     let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE&count=3");
                     let info = await response.json();
                     console.log(info);
                     firstImage.forEach((image, index) =>{
                         image.src = info[index].urls.regular;
+                        artist[index].innerHTML = "By " +info[index].user.name;
                     });
                     
                     //artist[index].innerHTML = info.user.first_name;
@@ -122,18 +126,14 @@
             let secondCar = document.querySelector(".second-car");
             let bigScroll = document.querySelector(".scroll-container");
             let titleScroll = document.querySelector(".container");
-           /* let firstCarBoxInfo = firstCar.getBoundingClientRect();
-            let secondCarBoxInfo = secondCar.getBoundingClientRect();*/
+           
             firstCar.style.top = "100%";
             secondCar.style.left = "100%";
             firstCar.style.left = "0%";
             titleScroll.style.top = "0%";
             bigScroll.style.top = "100%";
-        //    let pageY = firstCarBoxInfo.height;
-            let title = 1;
-            let firstCarScrollAmount = 1;
-            let leftScrollAmount = 1;
-            let amount3 = 1;
+            titleScroll.style.top = "0%";
+        
             
             let triofirst = document.querySelector(".trio1");
             let triosecond = document.querySelector(".trio2");
@@ -144,15 +144,14 @@
                 if(e.wheelDeltaY < 0){ //scrolling down
                     //firstCar photo isnt at the top of screen then bring watch photo across from right
                     if(parseInt(titleScroll.style.top.replace("%","")) > -100){
-                        titleScroll.style.top = (0 - title) + "%";
-                        title += 1;
+                        titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) - 2) + "%";
                     }else if(parseInt(firstCar.style.top.replace("%","")) > 0){
-                        firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 1) + "%";
+                        firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 2) + "%";
                     }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && parseInt(secondCar.style.left.replace("%","")) > 0){
-                        secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) - 1) + "%";
+                        secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) - 2) + "%";
                     }else if(parseInt(secondCar.style.left.replace("%","")) > -100){
-                        secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 1) + "%";
-                        firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 1) + "%";
+                        secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
+                        firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
                     }else if(parseInt(secondCar.style.left.replace("%","")) == -100){
                         bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
                     }
@@ -160,15 +159,18 @@
                 {
                 
                     if (parseInt(bigScroll.style.top.replace("%","")) != 100){
-                        bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 1) + "%";
-                        leftScrollAmount+=2;
-                    }else if(parseInt(firstCar.style.top.replace("%","")) < 0){
-                        firstCar.style.top = (100 - amount) + "%";
-                        firstCarScrollAmount-=2;
-                    }/*else{
-                        firstCar.style.top = (100 - amount) + "%";
-                        amount+2;
-                    }*/
+                        bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 2) + "%";
+                        
+                    }else if(parseInt(secondCar.style.left.replace("%","")) != 100){
+                        secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) + 2) + "%";
+                        
+                    }else if(parseInt(firstCar.style.left.replace("%","")) != 0){
+                        firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) + 2) + "%";
+                    }else if(parseInt(firstCar.style.top.replace("%","")) != 100){
+                        firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) + 2) + "%";
+                    }else if(parseInt(titleScroll.style.top.replace("%","")) != 0){
+                        titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) + 2) + "%";
+                    }
                 }
                 
                 //text moving onto screen from right

@@ -151,6 +151,17 @@
         right: 30%;
     }
     
+    .more-images{
+        position: relative;
+        height: 10vh;
+        width: 100vw;
+        background-color: #d71e28;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+       
+    
+    }
     
     .wrapper-api{
         position: relative;
@@ -175,12 +186,14 @@
         flex-direction: column;
         font-size: 100%;
     }
+   
 
     .one:nth-of-type(odd){
         top: 20%;
     }
 
       .small-Grid{
+          margin-top: 10%;
           position: relative;
           display: flex;
           justify-content: space-evenly;
@@ -220,6 +233,7 @@
         color: white;
         
     }
+    
 
     .video-container{
         position: relative;
@@ -241,9 +255,10 @@
     }
     
     .testing{
-        height: 50%;
-        width: 50%;
+        height: 70%;
+        width: 70%;
         border-radius: 25px;
+        
         
     }
 
