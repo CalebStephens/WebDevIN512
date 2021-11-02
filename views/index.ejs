@@ -1,0 +1,183 @@
+<nav> 
+    <div class = "buy">
+        <a href = "https://unsplash.com/s/photos/Car" target = "_blank" rel = "noopener">More Photos</a>
+    </div>
+    <div class = "logo">
+        <img src = "img/newLogo.png" width = "110" height = "100">
+    </div>
+    <div class = "faq">FAQ</div>  
+</nav>
+
+<div class = "container">
+<div class="rotate"><h1>CARS</h1></div>
+</div>
+
+
+ <div class = "first-car"></div>
+ <div class = "second-car"></div>
+
+<div class = "trio-text">
+    <div class = "trio1">WHAT WOULD</div>
+    <div class = "trio2">YOUR DREAM</div>
+    <div class = "trio3">CAR BE?</div>
+</div>
+
+
+<div class = "scroll-container">
+
+<div class="wrapper-api">
+    <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
+    <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
+    <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
+</div>
+<div class="more-images"><h2>More Images</h2></div>
+
+
+
+<div class = "small-Grid">
+    <div class="first-grid-column">
+        <div class = "grid-section"><img src = "img/RR.png"></div>
+        <div class = "grid-section"></div>
+        <div class = "grid-section"><img src = "img/lambo.jpeg"></div>
+        <div class = "grid-section"></div>
+        <div class = "grid-section"></div>
+    </div>
+</div>
+
+<div class = "outer">
+<div class="video-container">
+    <video muted autoplay loop>
+        <source src="img/Pexels Videos 3700.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+</div>
+    <div class = "video-text">Late Night Drives</div>
+</div>
+
+<div class="grid-container">
+    <div class="item"><img src = "img/lambo-logo.jpeg" alt= "Lamborghini Badge"></div>
+    <div class="item"><h2>Lamborghini</h2></div>
+    <div class="item"><h2>Porsche</h2></div>
+    <div class="item"><img src = "img/porshe-wheel.jpeg" alt="Porsche Wheel"></div>
+    <div class="item"><img src = "img/merc-logo.jpeg" alt="Mercedes-Benz Badge"></div>
+    <div class="item"><h2>Mercedes-Benz</h2></div>
+
+</div>
+
+<div class = "buttonContainer">
+    <button class = "button">Back to Top</button>
+</div>
+
+<footer>
+    <p>Made By Caleb Stephens</p>
+
+</footer>
+</div>
+<script>
+    
+    let firstImage = document.querySelectorAll(".testing");
+    let artist = document.querySelectorAll(".artist");
+
+    
+    
+        (async() =>{
+            let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE&count=3");
+            let info = await response.json();
+            console.log(info);
+            firstImage.forEach((image, index) =>{
+                image.src = info[index].urls.regular;
+                artist[index].innerHTML = "By " +info[index].user.name;
+            });
+            
+        
+            
+        })();
+    
+
+
+    let firstCar = document.querySelector(".first-car");
+    let secondCar = document.querySelector(".second-car");
+    let bigScroll = document.querySelector(".scroll-container");
+    let titleScroll = document.querySelector(".container");
+   
+    firstCar.style.top = "100%";
+    secondCar.style.left = "100%";
+    firstCar.style.left = "0%";
+    titleScroll.style.top = "0%";
+    bigScroll.style.top = "100%";
+    titleScroll.style.top = "0%";
+
+    
+    let triofirst = document.querySelector(".trio1");
+    let triosecond = document.querySelector(".trio2");
+    let triothree = document.querySelector(".trio3");
+
+    window.addEventListener('wheel', (e) =>{                
+        
+        if(e.wheelDeltaY < 0){ //scrolling down
+            //firstCar photo isnt at the top of screen then bring watch photo across from right
+            if(parseInt(titleScroll.style.top.replace("%","")) > -100){
+                titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) - 2) + "%";
+            }else if(parseInt(firstCar.style.top.replace("%","")) > 0){
+                firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 2) + "%";
+            }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && parseInt(secondCar.style.left.replace("%","")) > 0){
+                secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) - 2) + "%";
+            }else if(parseInt(secondCar.style.left.replace("%","")) > -100){
+                secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
+                firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
+            }else if(parseInt(secondCar.style.left.replace("%","")) == -100){
+                bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
+            }
+        } else //scrolling up
+        {
+        
+            if (parseInt(bigScroll.style.top.replace("%","")) != 100){
+                bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 2) + "%";
+                
+            }else if(parseInt(secondCar.style.left.replace("%","")) != 100){
+                secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) + 2) + "%";
+                
+            }else if(parseInt(firstCar.style.left.replace("%","")) != 0){
+                firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) + 2) + "%";
+            }else if(parseInt(firstCar.style.top.replace("%","")) != 100){
+                firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) + 2) + "%";
+            }else if(parseInt(titleScroll.style.top.replace("%","")) != 0){
+                titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) + 2) + "%";
+            }
+        }
+        
+        //text moving onto screen from right
+        let textAmount = 1;
+        if(e.wheelDeltaY < 0){
+                if(triofirst.style.right != "0%"){
+                triofirst.style.right = (50 - textAmount) + "%";
+                textAmount++; 
+                }
+                if(triosecond.style.left != "0%"){
+                triosecond.style.left = (40 - textAmount ) + "%";
+                }
+                if(triothree.style.right != "0%"){
+                triothree.style.right = (30 - textAmount) + "%";
+                }
+                
+                
+            
+        }
+                
+        
+    }); 
+    //back to top button
+    let button = document.querySelector(".button");
+    button.addEventListener('click', (e)=>{
+        console.log("here");
+        document.documentElement.scrollTop = 0;
+    });
+    
+
+    
+
+</script>
+        
+    
+
