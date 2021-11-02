@@ -100,6 +100,7 @@
     let secondCar = document.querySelector(".second-car");
     let bigScroll = document.querySelector(".scroll-container");
     let titleScroll = document.querySelector(".container");
+    let trio1 = document.querySelector(".trio1");
    
     firstCar.style.top = "100%";
     secondCar.style.left = "100%";
@@ -107,6 +108,7 @@
     titleScroll.style.top = "0%";
     bigScroll.style.top = "100%";
     titleScroll.style.top = "0%";
+    trio1.style.right = "80%";
 
     
     let triofirst = document.querySelector(".trio1");
@@ -114,7 +116,7 @@
     let triothree = document.querySelector(".trio3");
 
     window.addEventListener('wheel', (e) =>{                
-        
+
         if(e.wheelDeltaY < 0){ //scrolling down
             //firstCar photo isnt at the top of screen then bring watch photo across from right
             if(parseInt(titleScroll.style.top.replace("%","")) > -100){
@@ -126,7 +128,9 @@
             }else if(parseInt(secondCar.style.left.replace("%","")) > -100){
                 secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
                 firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
-            }else if(parseInt(secondCar.style.left.replace("%","")) == -100){
+            }else if(parseInt(trio1.style.right.replace("%","")) > -80){
+                trio1.style.right = (parseInt(trio1.style.right.replace("%","")) - 2) + "%";
+            }else if(parseInt(trio1.style.right.replace("%","")) == -80){
                 bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
             }
         } else //scrolling up
@@ -148,6 +152,7 @@
         }
         
         //text moving onto screen from right
+        /*
         let textAmount = 1;
         if(e.wheelDeltaY < 0){
                 if(triofirst.style.right != "0%"){
@@ -163,7 +168,7 @@
                 
                 
             
-        }
+        }*/
                 
         
     }); 
