@@ -14,5 +14,13 @@
     "express-ejs-layouts": "^2.5.1"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CalebStephens/WebDevIN512.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CalebStephens/WebDevIN512/issues"
+  },
+  "homepage": "https://github.com/CalebStephens/WebDevIN512#readme",
   "description": ""
 }
