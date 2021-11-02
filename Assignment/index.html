@@ -183,7 +183,12 @@
             let button = document.querySelector(".button");
             button.addEventListener('click', (e)=>{
                 console.log("here");
-                document.documentElement.scrollTop = 0;
+                firstCar.style.top = "100%";
+                secondCar.style.left = "100%";
+                firstCar.style.left = "0%";
+                titleScroll.style.top = "0%";
+                bigScroll.style.top = "100%";
+                titleScroll.style.top = "0%";
             });
             
 

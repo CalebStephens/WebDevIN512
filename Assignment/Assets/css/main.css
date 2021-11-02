@@ -258,9 +258,14 @@
     .testing{
         height: 70%;
         width: 70%;
-        border-radius: 25px;
+        border-radius: 10px;
         
         
+    }
+    .artist{
+        margin-top: 10%;
+        font-size: 110%;
+        text-transform: capitalize;
     }
 
 
