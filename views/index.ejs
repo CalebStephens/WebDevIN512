@@ -123,32 +123,25 @@
             //firstCar photo isnt at the top of screen then bring watch photo across from right
             if(parseInt(titleScroll.style.top.replace("%","")) > -100){
                 setDirection(titleScroll, "top");
-                //titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) - 2) + "%";
             }else if(parseInt(firstCar.style.top.replace("%","")) > 0){
                 setDirection(firstCar, "top");
-               // firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 2) + "%";
             }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && parseInt(secondCar.style.left.replace("%","")) > 0){
                 setDirection(secondCar, "left");
-                //secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) - 2) + "%";
             }else if(parseInt(secondCar.style.left.replace("%","")) > -100){
                 setDirection(secondCar, "left");
                 setDirection(firstCar, "left");
-               // secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
-                //firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
             }else if(parseInt(trio1.style.right.replace("%","")) > -80){
                 setDirection(trio1, "right");
                 setDirection(trio2, "left");
                 setDirection(trio3, "right");
-                //trio1.style.right = (parseInt(trio1.style.right.replace("%","")) - 2) + "%";
-                //trio2.style.left = (parseInt(trio2.style.left.replace("%","")) - 2) + "%";
-                //trio3.style.right = (parseInt(trio3.style.right.replace("%","")) - 2) + "%";
             }else if(parseInt(trio1.style.right.replace("%","")) == -80){
                 setDirection(bigScroll, "top");
-               // bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
+                console.log(parseInt(bigScroll.style.top.replace("%","")));
+               
             }
         } else //scrolling up
         {
-            console.log(parseInt(bigScroll.style.top.replace("%","")));
+            
             if (parseInt(bigScroll.style.top.replace("%","")) != 0){
                 bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 2) + "%"; 
             }else if(parseInt(trio1.style.right.replace("%","")) != 100){
