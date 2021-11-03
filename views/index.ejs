@@ -88,10 +88,7 @@
             firstImage.forEach((image, index) =>{
                 image.src = info[index].urls.regular;
                 artist[index].innerHTML = "By " +info[index].user.name;
-            });
-            
-        
-            
+            }); 
         })();
     
 
@@ -101,26 +98,32 @@
     let bigScroll = document.querySelector(".scroll-container");
     let titleScroll = document.querySelector(".container");
     let trio1 = document.querySelector(".trio1");
+    let trio2 = document.querySelector(".trio2");
+    let trio3 = document.querySelector(".trio3");
    
     firstCar.style.top = "100%";
     secondCar.style.left = "100%";
     firstCar.style.left = "0%";
     titleScroll.style.top = "0%";
-    bigScroll.style.top = "100%";
+    bigScroll.style.top = "0%";
     titleScroll.style.top = "0%";
-    trio1.style.right = "80%";
+    trio1.style.right = "100%";
+    trio2.style.left = "100%";
+    trio3.style.right = "100%";
 
-    
-    let triofirst = document.querySelector(".trio1");
-    let triosecond = document.querySelector(".trio2");
-    let triothree = document.querySelector(".trio3");
+    let setDirection = (element, direction) => {
+        element.style[direction] = (parseInt(element.style[direction].replace("%","")) - 2) + "%";
+    }
+
+
 
     window.addEventListener('wheel', (e) =>{                
 
         if(e.wheelDeltaY < 0){ //scrolling down
             //firstCar photo isnt at the top of screen then bring watch photo across from right
             if(parseInt(titleScroll.style.top.replace("%","")) > -100){
-                titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) - 2) + "%";
+                setDirection(titleScroll, "top");
+                //titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) - 2) + "%";
             }else if(parseInt(firstCar.style.top.replace("%","")) > 0){
                 firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 2) + "%";
             }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && parseInt(secondCar.style.left.replace("%","")) > 0){
@@ -130,6 +133,8 @@
                 firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
             }else if(parseInt(trio1.style.right.replace("%","")) > -80){
                 trio1.style.right = (parseInt(trio1.style.right.replace("%","")) - 2) + "%";
+                trio2.style.left = (parseInt(trio2.style.left.replace("%","")) - 2) + "%";
+                trio3.style.right = (parseInt(trio3.style.right.replace("%","")) - 2) + "%";
             }else if(parseInt(trio1.style.right.replace("%","")) == -80){
                 bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
             }
@@ -150,26 +155,6 @@
                 titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) + 2) + "%";
             }
         }
-        
-        //text moving onto screen from right
-        /*
-        let textAmount = 1;
-        if(e.wheelDeltaY < 0){
-                if(triofirst.style.right != "0%"){
-                triofirst.style.right = (50 - textAmount) + "%";
-                textAmount++; 
-                }
-                if(triosecond.style.left != "0%"){
-                triosecond.style.left = (40 - textAmount ) + "%";
-                }
-                if(triothree.style.right != "0%"){
-                triothree.style.right = (30 - textAmount) + "%";
-                }
-                
-                
-            
-        }*/
-                
         
     }); 
     //back to top button
