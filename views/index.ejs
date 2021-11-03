@@ -125,28 +125,38 @@
                 setDirection(titleScroll, "top");
                 //titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) - 2) + "%";
             }else if(parseInt(firstCar.style.top.replace("%","")) > 0){
-                firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 2) + "%";
+                setDirection(firstCar, "top");
+               // firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) - 2) + "%";
             }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && parseInt(secondCar.style.left.replace("%","")) > 0){
-                secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) - 2) + "%";
+                setDirection(secondCar, "left");
+                //secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) - 2) + "%";
             }else if(parseInt(secondCar.style.left.replace("%","")) > -100){
-                secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
-                firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
+                setDirection(secondCar, "left");
+                setDirection(firstCar, "left");
+               // secondCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
+                //firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) - 2) + "%";
             }else if(parseInt(trio1.style.right.replace("%","")) > -80){
-                trio1.style.right = (parseInt(trio1.style.right.replace("%","")) - 2) + "%";
-                trio2.style.left = (parseInt(trio2.style.left.replace("%","")) - 2) + "%";
-                trio3.style.right = (parseInt(trio3.style.right.replace("%","")) - 2) + "%";
+                setDirection(trio1, "right");
+                setDirection(trio2, "left");
+                setDirection(trio3, "right");
+                //trio1.style.right = (parseInt(trio1.style.right.replace("%","")) - 2) + "%";
+                //trio2.style.left = (parseInt(trio2.style.left.replace("%","")) - 2) + "%";
+                //trio3.style.right = (parseInt(trio3.style.right.replace("%","")) - 2) + "%";
             }else if(parseInt(trio1.style.right.replace("%","")) == -80){
-                bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
+                setDirection(bigScroll, "top");
+               // bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) - 2) + "%";
             }
         } else //scrolling up
         {
-        
-            if (parseInt(bigScroll.style.top.replace("%","")) != 100){
-                bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 2) + "%";
-                
+            console.log(parseInt(bigScroll.style.top.replace("%","")));
+            if (parseInt(bigScroll.style.top.replace("%","")) != 0){
+                bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 2) + "%"; 
+            }else if(parseInt(trio1.style.right.replace("%","")) != 100){
+                trio1.style.right = (parseInt(trio1.style.right.replace("%","")) + 2) + "%";
+                trio2.style.left = (parseInt(trio2.style.left.replace("%","")) + 2) + "%";
+                trio3.style.right = (parseInt(trio3.style.right.replace("%","")) + 2) + "%";	
             }else if(parseInt(secondCar.style.left.replace("%","")) != 100){
                 secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) + 2) + "%";
-                
             }else if(parseInt(firstCar.style.left.replace("%","")) != 0){
                 firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) + 2) + "%";
             }else if(parseInt(firstCar.style.top.replace("%","")) != 100){
