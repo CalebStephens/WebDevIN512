@@ -142,16 +142,17 @@
                 setDirection(trio1, "right");
                 setDirection(trio2, "left");
                 setDirection(trio3, "right");
-            }else if(parseInt(trio1.style.right.replace("%","")) == -80){
+            }else if(parseInt(trio1.style.right.replace("%","")) == -80 && parseInt(bigScroll.style.top.replace("%","")) > -798){
                 setDirection(bigScroll, "top");
                 console.log(parseInt(bigScroll.style.top.replace("%","")));
                
             }
         } else //scrolling up
         {
-            
+        
             if (parseInt(bigScroll.style.top.replace("%","")) != 0){
                 bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 2) + "%"; 
+                
             }else if(parseInt(trio1.style.right.replace("%","")) != 100){
                 trio1.style.right = (parseInt(trio1.style.right.replace("%","")) + 2) + "%";
                 trio2.style.left = (parseInt(trio2.style.left.replace("%","")) + 2) + "%";
