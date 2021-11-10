@@ -326,14 +326,16 @@
         height: 20vh;
         display: flex;
         align-items: center;
-        justify-self: center;
+        justify-content: center;
         
     }
     .button{
         position: relative;
         background-color: #d71e28;
+        color: #fff;
         border: none;
         text-decoration: none;
+        font-size: 7em;
         border-radius: 70px;
         width: 70%;
         height: 80%; 
@@ -342,6 +344,7 @@
 
     .button:hover{
         background-color: white;
+        color: black;
     }
 
     footer{
