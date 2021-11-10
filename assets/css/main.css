@@ -27,8 +27,7 @@
         justify-content: space-between;
         width:100%;
         position: fixed;
-        top:0;
-        padding-bottom: 25%;   
+        top:0;  
         z-index: 9999; 
     }
 
@@ -258,7 +257,7 @@
         
 
     }
-    
+
     .video-text{
         position: absolute;
         text-transform: uppercase;
@@ -287,18 +286,12 @@
         border-radius: 2%;
     }
 
-
-
-
     .grid-container{
         display:grid;
         position: relative;
         height: 300vh;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr ;
-       
-        
-        
     }
     .item{
         display: flex;
@@ -308,7 +301,6 @@
         height: 90%;
         align-items: center;
         justify-content: center;
-        
     }
 
     .item img{
@@ -318,13 +310,16 @@
     }
     .item h2{
         font-size: 400%;
+        will-change: transform;
+        transition: transform 450ms;
+    }
+
+    .item h2:hover{
+        transition: transform 125ms;
+        transform: translateY(-10px);
+        text-decoration: underline;
     }
     
-
-
-
-
-
     .buttonContainer{
         position: relative;
         width: 100vw;

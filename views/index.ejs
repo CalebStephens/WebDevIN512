@@ -26,9 +26,9 @@
 <div class = "scroll-container">
 
 <div class="wrapper-api">
-    <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
-    <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
-    <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
+    <% for(let i=0;i<3;i++){ %>
+        <div class="one"><img src = "" class="testing"><div class = "artist">Hello</div></div>
+    <% } %>
 </div>
 <div class="more-images"><h2>More Images</h2></div>
 
@@ -36,11 +36,9 @@
 
 <div class = "small-Grid">
     <div class="first-grid-column">
-        <div class = "grid-section"></div>
-        <div class = "grid-section"></div>
-        <div class = "grid-section"></div>
-        <div class = "grid-section"></div>
-        <div class = "grid-section"></div>
+        <% for(let i=0;i<5;i++){ %>
+            <div class = "grid-section"></div>
+        <% } %>
     </div>
 </div>
 
@@ -79,8 +77,6 @@
     let firstImage = document.querySelectorAll(".testing");
     let artist = document.querySelectorAll(".artist");
 
-    
-    
         (async() =>{
             let response = await fetch("https://api.unsplash.com/photos/random/?client_id=69ZziRvByyMqzlQM4iOTwQ-vTNKWbaUVxtqwveavuKE&count=3");
             let info = await response.json();
@@ -163,8 +159,6 @@
                 firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) + 2) + "%";
             }else if(parseInt(firstCar.style.top.replace("%","")) != 100){
                 firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) + 2) + "%";
-                firstCar.style.borderRadius = `${amount + minus}% ${amount + minus}% 0% 0%`;
-                minus -= 2;
             }else if(parseInt(titleScroll.style.top.replace("%","")) != 0){
                 titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) + 2) + "%";
             }
@@ -176,11 +170,15 @@
     button.addEventListener('click', (e)=>{
         console.log("here");
         firstCar.style.top = "100%";
+        firstCar.style.borderRadius = "80% 80% 0 0"
         secondCar.style.left = "100%";
         firstCar.style.left = "0%";
         titleScroll.style.top = "0%";
-        bigScroll.style.top = "100%";
+        bigScroll.style.top = "0%";
         titleScroll.style.top = "0%";
+        trio1.style.right = "100%";
+        trio2.style.left = "100%";
+        trio3.style.right = "100%";
     });
 
     let apiButton = document.querySelector(".apiSkip");
