@@ -171,9 +171,7 @@
         display: flex;
         justify-content: space-around;
         height: 100vh;
-        margin-top: 10%;
-        
-          
+        margin-top: 10%;    
     }
     
     /**/
@@ -361,6 +359,24 @@
     .grid-section img{
         width: 80%;
         height: 80%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container{
+            position: relative;
+        }
+
+        .first-car{
+            position: relative;
+        }
+
+        .second-car{
+            position: relative;
+        }
+
+        body, html{
+            overflow: scroll;
+        }
     }
     
     
