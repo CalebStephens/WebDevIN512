@@ -137,10 +137,10 @@
         top: 30%;
         white-space: nowrap;
     }
+    
     .trio2{
         position: absolute;
         white-space: nowrap;
-
     }
     .trio3{
         position: absolute;
@@ -175,41 +175,42 @@
         font-size: 100%;
     }
    
-
     .one:nth-of-type(odd){
         top: 20%;
     }
 
-      .small-Grid{
-          margin-top: 10%;
-          position: relative;
-          display: flex;
-          justify-content: space-evenly;
-          height: 200vh;
-          transform: rotate(-10deg); 
-          width: 100vw;
-      }
+    .small-Grid{
+        margin-top: 10%;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        height: 200vh;
+        transform: rotate(-10deg); 
+        width: 150vw;
+        right:10%;
+        top: 10%;
+    }
 
     .first-grid-column{
         display: flex;
         flex-direction: column;
-        height: 50%;
+        height: 150%;
         justify-content: space-around;
-        width: 33%;
-        
+        width: 60%;
+        margin: 0.5%;
     }
 
     .grid-section{
         border-radius: 25px;
         background-color: white;
-        margin-bottom: 2%;
+        margin: 2%;
         height: 100%;
-        width: 50%;
+        width: 100%;
     }
 
     .grid-section img{
-        height: 30%;
-        width: 30%;
+        height: 60%;
+        width: 60%;
     }
     .outer{
         position: relative;
