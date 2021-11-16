@@ -1,357 +1,368 @@
 
-   *{
-    font-family: "Times New Roman", Times, serif;
-   }
+*{
+font-family: "Times New Roman", Times, serif;
+}
 
-   body, html{
-        height: 100%;
-        margin:0;
-        scroll-behavior: smooth;
-        background-color: black;
-        overflow: hidden;
-        position: relative;
-        
-    }
-
-    main{
-
-    }
-    ::selection{
-        background: #d71e28;
-        color:#000;
-    }
-    nav{     
-        height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width:100%;
-        position: fixed;
-        top:0;  
-        z-index: 9999; 
-    }
-
-    .full{
-        height: 100vh;
-        width: 100vw;
-    }
-    .flexCenter{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    a:link {
-        color: red;
-      }
+body, html{
+    height: 100%;
+    margin:0;
+    scroll-behavior: smooth;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
     
-      a:hover{
-          color: tomato;
-      }
-    
-    a{
-        text-decoration: none;
-        color: white;
-    }
-    
-    .buy{
-        color: white;
-        margin-left: 20px;
-    }
+}
 
-    .logo{
-        margin-right: 3.5%;
-    }
-    
-    h1{
-        font-size: 700%;
-    }
+::selection{
+    background: #d71e28;
+    color:#000;
+}
+nav{     
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    position: fixed;
+    top:0;  
+    z-index: 9999; 
+}
 
-    .apiSkip{
-        color: white;
-        margin-right: 20px;
-    }
- 
-    .apiSkip:hover{
-        color: #d71e28;
-        cursor: pointer;
-    }
+.full{
+    height: 100vh;
+    width: 100vw;
+}
 
-    h2{
-        font-size: 100%;
-        color:white;
-        z-index: 32;
-    }   
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+a:hover {
+    color:black;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.buy{
+    color: white;
+    margin-left: 20px;
+}
+
+
+h1{
+    font-size: 700%;
+}
+.videoSkip{
+    color: white;
+    margin-left: 20px;
+}
+.videoSkip:hover{
+    color: #d71e28;
+    cursor: pointer;
+}
+
+.apiSkip{
+    color: white;
+    margin-right: 20px;
+}
+
+.apiSkip:hover{
+    color: #d71e28;
+    cursor: pointer;
+}
+
+h2{
+    font-size: 100%;
+    color:white;
+    z-index: 32;
+}   
+
+.container{
+    position: absolute;
+    flex-direction:column;
+    top: 10%;
+    left: 0%;
+}
+
+.rotate{
+    position: absolute;
+    color: white;
+    transform: rotate(-90deg);
+    font-size: 200%;  
+}
+
+.scroll-container{
+    position: relative; 
+}
+
+.first-car{  
+    background-image: url("../img/firstCar.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    top: 100%;
+    left: 0%;
+    border-radius: 40% 40% 0 0;
+    position: absolute;
+}
+
+.second-car{  
+    background-image: url("../img/secondCar.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 100%; 
+    position:absolute;
+}
+
+.trio-text{
+    color: white;
+    font-size: 7em;
+    position: relative;
+}
+
+.trio1{
+    position: absolute;
+    top: 30%;
+    white-space: nowrap;
+}
+
+.trio2{
+    position: absolute;
+    white-space: nowrap;
+}
+
+.trio3{
+    position: absolute;
+    bottom: 30%;
+    white-space: nowrap;
+}
+
+.more-images{
+    position: relative;
+    height: 10vh;
+    width: 100vw;
+    background-color: #d71e28;
+}
+
+.wrapper-api{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    margin-top: 10%;    
+}
+
+/**/
+.one{
+    position: relative;
+    border-radius: 25px;
+    width:33.33vw;
+    height: 75vh;
+    background-color: white;  
+    margin: 30px;
+    flex-direction: column;
+    font-size: 100%;
+}
+
+.one:nth-of-type(odd){
+    top: 20%;
+}
+
+.small-Grid{
+    margin-top: 10%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    height: 200vh;
+    transform: rotate(-10deg); 
+    width: 150vw;
+    right:10%;
+    top: 10%;
+    overflow: hidden;
+}
+
+.first-grid-column{
+    display: flex;
+    flex-direction: column;
+    height: 150%;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0.5%;
+}
+
+.grid-section{
+    border-radius: 25px;
+    background-color: white;
+    margin: 2%;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-section img{
+    height: 60%;
+    width: 60%;
+}
+
+.outer{
+    position: relative;
+    flex-direction:column;
+    color: white;
+}
+
+
+.video-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.video-text{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 10em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.testing{
+    height: 70%;
+    width: 70%;
+    border-radius: 2%;
+}
+
+.grid-container{
+    display:grid;
+    position: relative;
+    height: 300vh;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.item{
+    background: linear-gradient(#7D7C7B, #000);
+    border-radius: 25px;
+    margin: 2%;
+    height: 90%;
+}
+
+.item img{
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+}
+.item h2{
+    font-size: 400%;
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.item h2:hover{
+    transition: transform 125ms;
+    transform: translateY(-10px);
+    text-decoration: underline;
+}
+
+.buttonContainer{
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+}
+
+.button{
+    position: relative;
+    background-color: #d71e28;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-size: 7em;
+    border-radius: 70px;
+    width: 70%;
+    height: 80%; 
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+}
+
+footer{
+    position: relative;
+    background-color: tomato;
+    color: white;
+    height: 40vh;
+}
+
+.grid-section img{
+    width: 80%;
+    height: 80%;
+}
+
+@media screen and (max-width: 1000px) {
     .container{
-        position: absolute;
-        flex-direction:column;
-        top: 10%;
-        left: 0%;
+        position: relative;
     }
 
-    .rotate{
-        position: absolute;
-        color: white;
-        transform: rotate(-90deg);
-        font-size: 200%; 
-      
-        
-    }
-    .scroll-container{
-        position: relative; 
-    }
-    
-    
-    
-    .first-car{  
+    .first-car{
         background-image: url("../img/firstCar.jpeg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        overflow-x: hidden;
-        top: 100%;
+        top: 0%;
         left: 0%;
-        border-radius: 40% 40% 0 0;
-        position: absolute;
+        border-radius: 0;
+        position: relative;
     }
 
-    .second-car{  
+    .second-car{
         background-image: url("../img/secondCar.jpeg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         top: 0;
-        left: 100%; 
-        position:absolute;
+        left: 0; 
+        position:relative;
     }
 
-    .trio-text{
-        color: white;
-        font-size: 7em;
-        position: relative;
+    body, html{
+        overflow: scroll;
     }
-
-    .trio1{
-        position: absolute;
-        top: 30%;
-        white-space: nowrap;
-    }
-    
-    .trio2{
-        position: absolute;
-        white-space: nowrap;
-    }
-    .trio3{
-        position: absolute;
-        bottom: 30%;
-        white-space: nowrap;
-    }
-    
-    .more-images{
-        position: relative;
-        height: 10vh;
-        width: 100vw;
-        background-color: #d71e28;
-    }
-    
     .wrapper-api{
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        height: 100vh;
-        margin-top: 10%;    
-    }
-    
-    /**/
-    .one{
-        position: relative;
-        border-radius: 25px;
-        width:33.33vw;
-        height: 75vh;
-        background-color: white;  
-        margin: 30px;
         flex-direction: column;
-        font-size: 100%;
-    }
-   
-    .one:nth-of-type(odd){
-        top: 20%;
-    }
-
-    .small-Grid{
-        margin-top: 10%;
         position: relative;
-        display: flex;
-        justify-content: space-evenly;
-        height: 200vh;
-        transform: rotate(-10deg); 
-        width: 150vw;
-        right:10%;
-        top: 10%;
-        overflow: hidden;
     }
-
-    .first-grid-column{
-        display: flex;
-        flex-direction: column;
-        height: 150%;
-        justify-content: space-around;
-        width: 60%;
-        margin: 0.5%;
-    }
-
-    .grid-section{
-        border-radius: 25px;
-        background-color: white;
-        margin: 2%;
-        height: 100%;
-        width: 100%;
-    }
-
-    .grid-section img{
-        height: 60%;
-        width: 60%;
-    }
-    .outer{
-        position: relative;
-        flex-direction:column;
-        color: white;
-        
-    }
-    
-
-    .video-container{
-        position: relative;
-        height: 100%;
-        width: 100%;
-    }
-
-    video{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        object-fit: cover;
-    }
-
-    .video-text{
-        position: absolute;
-        text-transform: uppercase;
-        font-size: 10em;
-        letter-spacing: 4px;
-        overflow: hidden;
-        background: linear-gradient(90deg, #000, #fff, #000);
-        background-repeat: no-repeat;
-        background-size: 80%;
-        animation: animate 3s linear infinite;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    }
-    @keyframes animate {
-        0% {
-          background-position: -500%;
-        }
-        100% {
-          background-position: 500%;
-        }
-      }
-    
-    .testing{
-        height: 70%;
-        width: 70%;
-        border-radius: 2%;
-    }
-
-    .grid-container{
-        display:grid;
-        position: relative;
-        height: 300vh;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr ;
-    }
-    .item{
-
-        background: linear-gradient(#7D7C7B, #000);
-        border-radius: 25px;
-        margin: 2%;
-        height: 90%;
-
-    }
-
-    .item img{
-        border-radius: 25px;
-        height: 100%;
-        width: 100%;
-    }
-    .item h2{
-        font-size: 400%;
-        will-change: transform;
-        transition: transform 450ms;
-    }
-
-    .item h2:hover{
-        transition: transform 125ms;
-        transform: translateY(-10px);
-        text-decoration: underline;
-    }
-    
-    .buttonContainer{
-        position: relative;
-        width: 100vw;
-        height: 20vh;
-        
-    }
-    .button{
-        position: relative;
-        background-color: #d71e28;
-        color: #fff;
-        border: none;
-        text-decoration: none;
-        font-size: 7em;
-        border-radius: 70px;
-        width: 70%;
-        height: 80%; 
-        
-    }
-
-    .button:hover{
-        background-color: white;
-        color: black;
-    }
-
-    footer{
-        position: relative;
-        background-color: tomato;
-        color: white;
-        height: 40vh;
-        
-    }
-
-    .grid-section img{
-        width: 80%;
-        height: 80%;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .container{
-            position: relative;
-        }
-
-        .first-car{
-            position: relative;
-        }
-
-        .second-car{
-            position: relative;
-        }
-
-        body, html{
-            overflow: scroll;
-        }
-        .wrapper-api{
-            flex-direction: column;
-        }
-    }
+}
     
     
       

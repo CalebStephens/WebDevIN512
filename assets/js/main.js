@@ -120,5 +120,19 @@
         trio3.style.right = "-80%";
     });
 
+    let videoButton = document.querySelector(".videoSkip");
+    videoButton.addEventListener('click', (e)=>{
+        console.log("here");
+        firstCar.style.top = "0%";
+        secondCar.style.left = "-100%";
+        firstCar.style.left = "-100%";
+        titleScroll.style.top = "0%";
+        bigScroll.style.top = "-450%";
+        titleScroll.style.top = "-100%";
+        trio1.style.right = "-80%";
+        trio2.style.left = "-80%";
+        trio3.style.right = "-80%";
+    });
+
 
     
