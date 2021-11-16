@@ -12,7 +12,12 @@
             }); 
         })();
     
-
+    const scrollAmount = 2;
+    const borderAmount = 100;
+    const fullOffscreen = 100;
+    const onScreen = 0;
+    const smallOffscreen = 80;
+    const stopScroll = 805;
 
     let firstCar = document.querySelector(".first-car");
     let secondCar = document.querySelector(".second-car");
@@ -21,8 +26,6 @@
     let trio1 = document.querySelector(".trio1");
     let trio2 = document.querySelector(".trio2");
     let trio3 = document.querySelector(".trio3");
-   
-    const scrollAmount = 2;
 
     firstCar.style.top = "100%";
     firstCar.style.borderRadius = "80% 80% 0 0"
@@ -35,57 +38,58 @@
     trio2.style.left = "100%";
     trio3.style.right = "100%";
 
-    let amount = 100;
     let minus = 2;
 
-    let setDirection = (element, direction) => {
+    let setDirectionDown = (element, direction) => {
         element.style[direction] = (parseInt(element.style[direction].replace("%","")) - scrollAmount) + "%";
     }
 
+    let setDirectionUp = (element, direction) => {
+        element.style[direction] = (parseInt(element.style[direction].replace("%","")) + scrollAmount) + "%";
+    }
 
     window.addEventListener('wheel', (e) =>{                
-
-        if(e.wheelDeltaY < 0){ //scrolling down
+        //scrolling down
+        if(e.wheelDeltaY < 0){ 
             //firstCar photo isnt at the top of screen then bring watch photo across from right
-            if(parseInt(titleScroll.style.top.replace("%","")) > -100){
-                setDirection(titleScroll, "top");
-            }else if(parseInt(firstCar.style.top.replace("%","")) > 0){
-                setDirection(firstCar, "top");
-                firstCar.style.borderRadius = `${amount - minus}% ${amount - minus}% 0% 0%`;
+            if(parseInt(titleScroll.style.top.replace("%","")) > -fullOffscreen){
+                setDirectionDown(titleScroll, "top");
+            }else if(parseInt(firstCar.style.top.replace("%","")) > onScreen){
+                setDirectionDown(firstCar, "top");
+                firstCar.style.borderRadius = `${borderAmount - minus}% ${borderAmount - minus}% 0% 0%`;
                 minus += 2;
                 console.log(minus);
-            }else if (parseInt(firstCar.style.top.replace("%","")) == 0 && parseInt(secondCar.style.left.replace("%","")) > 0){
-                setDirection(secondCar, "left");
-            }else if(parseInt(secondCar.style.left.replace("%","")) > -100){
-                setDirection(secondCar, "left");
-                setDirection(firstCar, "left");
-            }else if(parseInt(trio1.style.right.replace("%","")) > -80){
-                setDirection(trio1, "right");
-                setDirection(trio2, "left");
-                setDirection(trio3, "right");
-            }else if(parseInt(trio1.style.right.replace("%","")) == -80 && parseInt(bigScroll.style.top.replace("%","")) > -798){
-                setDirection(bigScroll, "top");
+            }else if (parseInt(firstCar.style.top.replace("%","")) == onScreen && parseInt(secondCar.style.left.replace("%","")) > onScreen){
+                setDirectionDown(secondCar, "left");
+            }else if(parseInt(secondCar.style.left.replace("%","")) > -fullOffscreen){
+                setDirectionDown(secondCar, "left");
+                setDirectionDown(firstCar, "left");
+            }else if(parseInt(trio1.style.right.replace("%","")) > -smallOffscreen){
+                setDirectionDown(trio1, "right");
+                setDirectionDown(trio2, "left");
+                setDirectionDown(trio3, "right");
+            }else if(parseInt(trio1.style.right.replace("%","")) == -smallOffscreen && parseInt(bigScroll.style.top.replace("%","")) > -stopScroll){
+                setDirectionDown(bigScroll, "top");
                 console.log(parseInt(bigScroll.style.top.replace("%","")));
                
             }
         } else //scrolling up
         {
         
-            if (parseInt(bigScroll.style.top.replace("%","")) != 0){
-                bigScroll.style.top = (parseInt(bigScroll.style.top.replace("%","")) + 2) + "%"; 
-                
-            }else if(parseInt(trio1.style.right.replace("%","")) != 100){
-                trio1.style.right = (parseInt(trio1.style.right.replace("%","")) + 2) + "%";
-                trio2.style.left = (parseInt(trio2.style.left.replace("%","")) + 2) + "%";
-                trio3.style.right = (parseInt(trio3.style.right.replace("%","")) + 2) + "%";	
-            }else if(parseInt(secondCar.style.left.replace("%","")) != 100){
-                secondCar.style.left = (parseInt(secondCar.style.left.replace("%","")) + 2) + "%";
-            }else if(parseInt(firstCar.style.left.replace("%","")) != 0){
-                firstCar.style.left = (parseInt(firstCar.style.left.replace("%","")) + 2) + "%";
-            }else if(parseInt(firstCar.style.top.replace("%","")) != 100){
-                firstCar.style.top = (parseInt(firstCar.style.top.replace("%","")) + 2) + "%";
-            }else if(parseInt(titleScroll.style.top.replace("%","")) != 0){
-                titleScroll.style.top = (parseInt(titleScroll.style.top.replace("%","")) + 2) + "%";
+            if (parseInt(bigScroll.style.top.replace("%","")) != onScreen){
+                setDirectionUp(bigScroll, "top");
+            }else if(parseInt(trio1.style.right.replace("%","")) != fullOffscreen){
+                setDirectionUp(trio1, "right");
+                setDirectionUp(trio2, "left");
+                setDirectionUp(trio3, "right");	
+            }else if(parseInt(secondCar.style.left.replace("%","")) != fullOffscreen){
+                setDirectionUp(secondCar, "left");
+            }else if(parseInt(firstCar.style.left.replace("%","")) != onScreen){
+                setDirectionUp(firstCar, "left");
+            }else if(parseInt(firstCar.style.top.replace("%","")) != fullOffscreen){
+                setDirectionUp(firstCar, "top");
+            }else if(parseInt(titleScroll.style.top.replace("%","")) != onScreen){
+                setDirectionUp(titleScroll, "top");
             }
         }
     }); 
@@ -105,7 +109,7 @@
         trio2.style.left = "100%";
         trio3.style.right = "100%";
     });
-
+    //skip to api button
     let apiButton = document.querySelector(".apiSkip");
     apiButton.addEventListener('click', (e)=>{
         console.log("here");
@@ -119,7 +123,7 @@
         trio2.style.left = "-80%";
         trio3.style.right = "-80%";
     });
-
+    //skip to video button
     let videoButton = document.querySelector(".videoSkip");
     videoButton.addEventListener('click', (e)=>{
         console.log("here");
