@@ -189,6 +189,7 @@
         width: 150vw;
         right:10%;
         top: 10%;
+        overflow: hidden;
     }
 
     .first-grid-column{
@@ -346,6 +347,9 @@
 
         body, html{
             overflow: scroll;
+        }
+        .wrapper-api{
+            flex-direction: column;
         }
     }
     
