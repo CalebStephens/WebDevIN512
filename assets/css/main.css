@@ -61,7 +61,7 @@ h1{
 }
 .videoSkip{
     color: white;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 .videoSkip:hover{
     color: #d71e28;
@@ -70,7 +70,7 @@ h1{
 
 .apiSkip{
     color: white;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .apiSkip:hover{
