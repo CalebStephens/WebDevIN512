@@ -31,6 +31,16 @@
         z-index: 9999; 
     }
 
+    .full{
+        height: 100vh;
+        width: 100vw;
+    }
+    .flexCenter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     a:link {
         color: red;
       }
@@ -75,12 +85,7 @@
 
     .container{
         position: absolute;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
         flex-direction:column;
-        align-items: center;
-        justify-content: center;
         top: 10%;
         left: 0%;
     }
@@ -101,41 +106,30 @@
     
     .first-car{  
         background-image: url("../img/firstCar.jpeg");
-        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         overflow-x: hidden;
         top: 100%;
         left: 0%;
-        width: 100vw;
         border-radius: 40% 40% 0 0;
         position: absolute;
     }
 
     .second-car{  
         background-image: url("../img/secondCar.jpeg");
-        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100vw;
         top: 0;
         left: 100%; 
-        
         position:absolute;
     }
 
     .trio-text{
         color: white;
-        display: flex;
-        height: 100vh;
-        width: 100vw;
-        align-items: center;
-        justify-content: center;
         font-size: 7em;
         position: relative;
-        
     }
 
     .trio1{
@@ -159,11 +153,6 @@
         height: 10vh;
         width: 100vw;
         background-color: #d71e28;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-       
-    
     }
     
     .wrapper-api{
@@ -177,14 +166,11 @@
     /**/
     .one{
         position: relative;
-        display: flex;
         border-radius: 25px;
         width:33.33vw;
         height: 75vh;
         background-color: white;  
         margin: 30px;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
         font-size: 100%;
     }
@@ -214,9 +200,6 @@
     }
 
     .grid-section{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 25px;
         background-color: white;
         margin-bottom: 2%;
@@ -230,12 +213,7 @@
     }
     .outer{
         position: relative;
-        width:100vw;
-        height:100vh;
-        display:flex;
         flex-direction:column;
-        justify-content:center;
-        align-items: center;
         color: white;
         
     }
@@ -252,8 +230,6 @@
         width: 100%;
         position: absolute;
         object-fit: cover;
-        
-
     }
 
     .video-text{
@@ -292,13 +268,12 @@
         grid-template-columns: 1fr 1fr ;
     }
     .item{
-        display: flex;
+
         background: linear-gradient(#7D7C7B, #000);
         border-radius: 25px;
         margin: 2%;
         height: 90%;
-        align-items: center;
-        justify-content: center;
+
     }
 
     .item img{
@@ -322,9 +297,6 @@
         position: relative;
         width: 100vw;
         height: 20vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         
     }
     .button{
@@ -350,9 +322,6 @@
         background-color: tomato;
         color: white;
         height: 40vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         
     }
 
