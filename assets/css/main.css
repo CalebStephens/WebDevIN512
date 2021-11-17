@@ -327,7 +327,7 @@ footer{
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     .container{
         position: relative;
     }
@@ -337,9 +337,9 @@ footer{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        top: 0%;
-        left: 0%;
-        border-radius: 0;
+        top: auto!important;
+        left: auto!important;
+        border-radius: 0!important;
         position: relative;
     }
 
@@ -348,18 +348,42 @@ footer{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        top: 0;
-        left: 0; 
+        top: auto!important;
+        left: auto!important; 
         position:relative;
     }
 
     body, html{
-        overflow: scroll;
+       overflow: scroll; 
     }
+    
     .wrapper-api{
-        flex-direction: column;
         position: relative;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 50vw;
+
     }
+    
+    .one{
+        position: relative;
+        border-radius: 25px;
+        width:100%;
+        height: 75%;
+        background-color: white;  
+        flex-direction: column;
+        font-size: 100%;
+    }
+    
+    .one:nth-of-type(odd){
+        top: 0;
+    }
+
+
+
 }
     
     
