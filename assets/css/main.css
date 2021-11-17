@@ -10,13 +10,44 @@ body, html{
     background-color: black;
     overflow: hidden;
     position: relative;
-    
 }
 
 ::selection{
     background: #d71e28;
     color:#000;
 }
+
+/**styles for multiple classes with the same characteristics*/
+.full{
+    height: 100vh;
+    width: 100vw;
+}
+a:hover {
+    color:black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 700%;
+}
+
+h2{
+    font-size: 100%;
+    color:white;
+    z-index: 32;
+}   
+
+/**Navbar section, fixed seethrough navbar with text that when clicked skips to content*/
 nav{     
     height: 120px;
     display: flex;
@@ -28,41 +59,11 @@ nav{
     z-index: 9999; 
 }
 
-.full{
-    height: 100vh;
-    width: 100vw;
-}
-
-.flexCenter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a:hover {
-    color:black;
-}
-
-
-
-a{
-    text-decoration: none;
-    color: white;
-}
-
-.buy{
-    color: white;
-    margin-left: 20px;
-}
-
-
-h1{
-    font-size: 700%;
-}
 .videoSkip{
     color: white;
     margin-right: 20px;
 }
+
 .videoSkip:hover{
     color: #d71e28;
     cursor: pointer;
@@ -78,12 +79,7 @@ h1{
     cursor: pointer;
 }
 
-h2{
-    font-size: 100%;
-    color:white;
-    z-index: 32;
-}   
-
+/**Opening text which is rotated*/
 .container{
     position: absolute;
     flex-direction:column;
@@ -98,10 +94,7 @@ h2{
     font-size: 200%;  
 }
 
-.scroll-container{
-    position: relative; 
-}
-
+/**first and second cars which come on to the screen*/
 .first-car{  
     background-image: url("../img/firstCar.jpeg");
     background-position: center;
@@ -124,36 +117,32 @@ h2{
     position:absolute;
 }
 
+/**Three lines of text which scroll onto screen from sides*/
 .trio-text{
     color: white;
     font-size: 7em;
     position: relative;
 }
 
-.trio1{
+.trio{
     position: absolute;
-    top: 30%;
     white-space: nowrap;
 }
 
-.trio2{
-    position: absolute;
-    white-space: nowrap;
+.trio1{
+    top: 30%;
 }
 
 .trio3{
-    position: absolute;
     bottom: 30%;
-    white-space: nowrap;
 }
 
-.more-images{
-    position: relative;
-    height: 10vh;
-    width: 100vw;
-    background-color: #d71e28;
+/**Container for the rest of the pages content*/
+.scroll-container{
+    position: relative; 
 }
 
+/**API styling */
 .wrapper-api{
     position: relative;
     display: flex;
@@ -162,7 +151,6 @@ h2{
     margin-top: 10%;    
 }
 
-/**/
 .one{
     position: relative;
     border-radius: 25px;
@@ -178,6 +166,20 @@ h2{
     top: 20%;
 }
 
+.more-images{
+    position: relative;
+    height: 10vh;
+    width: 100vw;
+    background-color: #d71e28;
+}
+
+.indivAPI{
+    height: 70%;
+    width: 70%;
+    border-radius: 2%;
+}
+
+/**Sets up the grid on an angle*/
 .small-Grid{
     margin-top: 10%;
     position: relative;
@@ -191,6 +193,7 @@ h2{
     overflow: hidden;
 }
 
+/** grid cloumns*/
 .first-grid-column{
     display: flex;
     flex-direction: column;
@@ -200,6 +203,7 @@ h2{
     margin: 0.5%;
 }
 
+/** individual grid sections*/
 .grid-section{
     border-radius: 25px;
     background-color: white;
@@ -213,12 +217,12 @@ h2{
     width: 60%;
 }
 
+/**container for the video and text*/
 .outer{
     position: relative;
     flex-direction:column;
     color: white;
 }
-
 
 .video-container{
     position: relative;
@@ -232,7 +236,7 @@ video{
     position: absolute;
     object-fit: cover;
 }
-
+/**text ontop of video with styling and animation effect*/
 .video-text{
     position: absolute;
     text-transform: uppercase;
@@ -246,7 +250,7 @@ video{
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
-
+/**animation*/
 @keyframes animate {
     0% {
         background-position: -500%;
@@ -256,12 +260,7 @@ video{
     }
 }
 
-.testing{
-    height: 70%;
-    width: 70%;
-    border-radius: 2%;
-}
-
+/**2by3 grid with a photo and website of that brand*/
 .grid-container{
     display:grid;
     position: relative;
@@ -269,7 +268,7 @@ video{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr ;
 }
-
+/**individual square with picture and text button*/
 .item{
     background: linear-gradient(#7D7C7B, #000);
     border-radius: 25px;
@@ -294,6 +293,7 @@ video{
     text-decoration: underline;
 }
 
+/**back to top button*/
 .buttonContainer{
     position: relative;
     width: 100vw;
@@ -317,17 +317,15 @@ video{
     color: black;
 }
 
+/**footer styling*/
 footer{
     position: relative;
-    background-color: tomato;
+    background-color:#d71e28;
     color: white;
     height: 40vh;
 }
 
-.grid-section img{
-    width: 80%;
-    height: 80%;
-}
+
 
 @media screen and (max-width: 1000px) {
     .container{

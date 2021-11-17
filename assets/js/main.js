@@ -1,5 +1,5 @@
    
-    let firstImage = document.querySelectorAll(".testing");
+    let firstImage = document.querySelectorAll(".indivAPI");
     let artist = document.querySelectorAll(".artist");
 
         (async() =>{
