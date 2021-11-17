@@ -326,7 +326,7 @@ footer{
 }
 
 
-
+/*styling for saller screens, where i use !important is because style is being over ridden in js*/
 @media screen and (max-width: 600px) {
     .container{
         position: relative;
@@ -372,8 +372,7 @@ footer{
         position: relative;
         border-radius: 25px;
         width:100%;
-        height: 75%;
-        background-color: white;  
+        height: 75%; 
         flex-direction: column;
         font-size: 100%;
     }
@@ -385,7 +384,6 @@ footer{
     .outer{
         position: relative;
         flex-direction:column;
-        color: white;
     }
     
     .video-container{
@@ -415,7 +413,6 @@ footer{
         -webkit-text-fill-color: rgba(255, 255, 255, 0);
     }
     .item{
-        background: linear-gradient(#7D7C7B, #000);
         border-radius: 25px;
         margin: 2%;
         height: 75%;
@@ -427,7 +424,6 @@ footer{
     }
 
     .trio-text{
-        color: white;
         font-size: 50px;
         position: relative;
         display: flex;
