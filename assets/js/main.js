@@ -1,4 +1,4 @@
-   
+/*Selecting divs for api information, and fetching for api*/   
     let firstImage = document.querySelectorAll(".indivAPI");
     let artist = document.querySelectorAll(".artist");
 
@@ -11,7 +11,10 @@
                 artist[index].innerHTML = "By " +info[index].user.name;
             }); 
         })();
-    
+   
+/* Scroll function which brings components onto screen at certain times*/
+
+//consts
     const scrollAmount = 2;
     const borderAmount = 100;
     const fullOffscreen = 100;
@@ -19,6 +22,7 @@
     const smallOffscreen = 80;
     const stopScroll = 805;
 
+//div selection
     let firstCar = document.querySelector(".first-car");
     let secondCar = document.querySelector(".second-car");
     let bigScroll = document.querySelector(".scroll-container");
@@ -27,6 +31,7 @@
     let trio2 = document.querySelector(".trio2");
     let trio3 = document.querySelector(".trio3");
 
+    //must set top, left and right in js in order to use parseInt
     firstCar.style.top = "100%";
     firstCar.style.borderRadius = "80% 80% 0 0"
     secondCar.style.left = "100%";
@@ -38,8 +43,11 @@
     trio2.style.left = "100%";
     trio3.style.right = "100%";
 
+    //variable for border radius getting larger on scroll
     let minus = 2;
 
+    /*both methods are called on scroll and take in direction of which the div is going i.e left, top.
+    and which elemnt is being moved, a method for both scrolling up and down */
     let setDirectionDown = (element, direction) => {
         element.style[direction] = (parseInt(element.style[direction].replace("%","")) - scrollAmount) + "%";
     }
@@ -48,14 +56,17 @@
         element.style[direction] = (parseInt(element.style[direction].replace("%","")) + scrollAmount) + "%";
     }
 
+    /*listening for the scroll wheel and determining wether it is scrolling up or down.
+    Each if and else if statement is checking to make sure each div in order has moved
+     on or off the screen enough before moving the next div into view*/
     window.addEventListener('wheel', (e) =>{                
         //scrolling down
         if(e.wheelDeltaY < 0){ 
-            //firstCar photo isnt at the top of screen then bring watch photo across from right
             if(parseInt(titleScroll.style.top.replace("%","")) > -fullOffscreen){
                 setDirectionDown(titleScroll, "top");
             }else if(parseInt(firstCar.style.top.replace("%","")) > onScreen){
                 setDirectionDown(firstCar, "top");
+                //border radius expanding
                 firstCar.style.borderRadius = `${borderAmount - minus}% ${borderAmount - minus}% 0% 0%`;
                 minus += 2;
                 console.log(minus);
@@ -93,6 +104,8 @@
             }
         }
     }); 
+
+    /*Back to and skip buttons set all divs in proper positions of the screen in order for scroll function to work*/
 
     //back to top button
     let button = document.querySelector(".button");
