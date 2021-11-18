@@ -151,5 +151,25 @@
         trio3.style.right = "-80%";
     });
 
+    let gridSections = document.querySelectorAll(".grid-section");
+    let colourBlue = "#003264";
+    let colourRed = "#d71e28";
+    let colourWhite = "#fff";
+    gridSections.forEach(section => {
+        let colourNum = Math.floor(Math.random() * 3);
+        switch(colourNum){
+            case 0:
+                section.style.backgroundColor = colourBlue;
+                break;
+            case 1:
+                section.style.backgroundColor = colourRed;
+                break;
+            case 2:
+                section.style.backgroundColor = colourWhite;
+                break;
+        };
+
+    });
+
 
     
