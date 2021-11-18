@@ -5,6 +5,7 @@ To run locally using node, make sure you are in you github repo's file, then in 
 $ npm install
 $ node index.js
 ```
+this will run on "localhost:3000".
 
 You can reach my website on https://carscarscarsbycaleb.herokuapp.com/
 
