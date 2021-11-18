@@ -43,7 +43,7 @@ h1{
 
 h2{
     font-size: 100%;
-    color:white;
+    color:#fff;
     z-index: 32;
 }   
 
@@ -70,7 +70,7 @@ nav{
 }
 
 .apiSkip{
-    color: white;
+    color: #fff;
     margin-left: 20px;
 }
 
@@ -313,7 +313,7 @@ video{
 }
 
 .button:hover{
-    background-color: white;
+    background-color: #fff;
     color: black;
 }
 
@@ -357,6 +357,7 @@ footer{
        overflow: scroll; 
     }
     
+    /**changed the direction of the flex box for the api*/
     .wrapper-api{
         position: relative;
         flex-direction: column;
@@ -380,7 +381,7 @@ footer{
     .one:nth-of-type(odd){
         top: 0;
     }
-
+    /**changing video text to appear nicer on phone*/
     .outer{
         position: relative;
         flex-direction:column;
@@ -422,13 +423,14 @@ footer{
         position: relative;
         height: 200vh;
     }
-
+    /*Position three lines of text back on screen in center*/
     .trio-text{
         font-size: 50px;
         position: relative;
         display: flex;
         flex-direction: column;
     }
+    
     
     .trio{
         position: relative;

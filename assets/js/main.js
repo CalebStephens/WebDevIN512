@@ -151,6 +151,7 @@
         trio3.style.right = "-80%";
     });
 
+    /**Gives each square in the big grid a random colour from the three site colours each time website is loaded */
     let gridSections = document.querySelectorAll(".grid-section");
     let colourBlue = "#003264";
     let colourRed = "#d71e28";
