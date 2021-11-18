@@ -15,3 +15,4 @@ On local host using "heroku local web" it will be on localhost:5000.
 Any work completed must be committed to production branch for the site to update with changes.
 Recommended: Open locally with made changes to make sure the code has worked correctly then commit and push.
 
+Everything to do with site is run in production branch so do not merge to master.
