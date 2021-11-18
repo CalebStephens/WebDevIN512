@@ -156,8 +156,9 @@
     let colourBlue = "#003264";
     let colourRed = "#d71e28";
     let colourWhite = "#fff";
+    const colourAmount = 3;
     gridSections.forEach(section => {
-        let colourNum = Math.floor(Math.random() * 3);
+        let colourNum = Math.floor(Math.random() * colourAmount);
         switch(colourNum){
             case 0:
                 section.style.backgroundColor = colourBlue;
@@ -168,6 +169,10 @@
             case 2:
                 section.style.backgroundColor = colourWhite;
                 break;
+            default:
+                section.style.backgroundColor = colourWhite;
+                break;
+
         };
 
     });
