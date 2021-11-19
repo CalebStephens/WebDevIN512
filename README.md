@@ -1,5 +1,7 @@
 #Caleb Stephens WebDevIN512 Assignment
 
+This website is based off of https://bugatti-smartwatches.com/
+
 To run locally using node, make sure you are in you github repo's file, then in terminal in a bash shell:
 ```
 $ npm install
